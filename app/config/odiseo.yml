@@ -1,0 +1,5 @@
+parameters:
+    odiseo_project.model.user: Odiseo\Bundle\ProjectBundle\Entity\User
+    odiseo_project.repository.user: Odiseo\Bundle\ProjectBundle\Repository\UserRepository
+    
+#    odiseo_backend.homepage_route: odiseo_branca_rally_backend_dashboard

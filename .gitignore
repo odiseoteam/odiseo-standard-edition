@@ -1,37 +1,44 @@
-# Cache and logs (Symfony2)
-/app/cache/*
-/app/logs/*
-!app/cache/.gitkeep
-!app/logs/.gitkeep
+# Bootstrap
+/app/bootstrap*
 
-# Cache and logs (Symfony3)
-/var/cache/*
-/var/logs/*
-!var/cache/.gitkeep
-!var/logs/.gitkeep
-
-# Parameters
-/app/config/parameters.yml
-/app/config/parameters.ini
-
-# Managed by Composer
-/app/bootstrap.php.cache
-/var/bootstrap.php.cache
-/bin/*
-!bin/console
-!bin/symfony_requirements
+# Symfony directories
 /vendor/
+app/logs/*
+app/cache/*
+web/css/*
+web/js/*
+web/admin/css/*
+web/admin/js/*
+web/uploads/*
+web/bundles/*
+web/assets/compiled/*
+web/media/*
+/composer.lock
 
-# Assets and user uploads
-/web/bundles/
-/web/uploads/
 
-# PHPUnit
-/app/phpunit.xml
-/phpunit.xml
+# Configuration files
+app/config/parameters.ini
+app/config/parameters.yml
+app/config/*.local.yml
+app/config/deploy.rb
+behat.yml
 
-# Build data
-/build/
 
-# Composer PHAR
-/composer.phar
+# eclipse
+.externalToolBuilders
+.settings
+.buildpath
+.project
+
+#Others
+.DS_Store
+bin/behat
+bin/doctrine*
+bin/phpspec
+bin/webunit
+bin/phpunit
+bin/phpcrodm
+bin/phpcrodm.php
+bin/jackalope
+bin/phpunit
+logs
