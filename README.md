@@ -1,7 +1,7 @@
 Symfony Standard Edition
 ========================
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony2
+Welcome to the Symfony Standard Edition - a fully-functional Symfony
 application that you can use as the skeleton for your new applications.
 
 For details on how to download and get started with Symfony, see the
@@ -41,9 +41,6 @@ It comes pre-configured with the following bundles:
 
   * [**MonologBundle**][11] - Adds support for Monolog, a logging library
 
-  * [**AsseticBundle**][12] - Adds support for Assetic, an asset processing
-    library
-
   * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
     the web debug toolbar
 
@@ -53,17 +50,19 @@ It comes pre-configured with the following bundles:
   * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
     capabilities
 
+  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
+    integration
+
 All libraries and bundles included in the Symfony Standard Edition are
 released under the MIT or BSD license.
 
 Enjoy!
 
-[1]:  http://symfony.com/doc/2.6/book/installation.html
-[6]:  http://symfony.com/doc/2.6/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  http://symfony.com/doc/2.6/book/doctrine.html
-[8]:  http://symfony.com/doc/2.6/book/templating.html
-[9]:  http://symfony.com/doc/2.6/book/security.html
-[10]: http://symfony.com/doc/2.6/cookbook/email.html
-[11]: http://symfony.com/doc/2.6/cookbook/logging/monolog.html
-[12]: http://symfony.com/doc/2.6/cookbook/assetic/asset_management.html
-[13]: http://symfony.com/doc/2.6/bundles/SensioGeneratorBundle/index.html
+[1]:  https://symfony.com/doc/2.8/book/installation.html
+[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
+[7]:  https://symfony.com/doc/2.8/book/doctrine.html
+[8]:  https://symfony.com/doc/2.8/book/templating.html
+[9]:  https://symfony.com/doc/2.8/book/security.html
+[10]: https://symfony.com/doc/2.8/cookbook/email.html
+[11]: https://symfony.com/doc/2.8/cookbook/logging/monolog.html
+[13]: https://symfony.com/doc/2.8/bundles/SensioGeneratorBundle/index.html

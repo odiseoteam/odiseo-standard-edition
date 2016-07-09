@@ -1,7 +1,0 @@
-easy_admin:
-    formats:
-        date:     'd/m/Y'
-        time:     'H:i'
-        datetime: 'd/m/Y H:i:s'
-    site_name: 'Panel de administración'
-#    entities:

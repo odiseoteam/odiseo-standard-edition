@@ -1,0 +1,26 @@
+{% extends 'OdiseoAppBundle:Frontend:layout.html.twig' %}
+{% block bodyClass %}free{% endblock %}
+
+{% block content %}
+    <div id="freeoscar">
+        <div class="oscarlogo">
+            <a href="http://www.antrocket.com/en/freeoscarlopeznow" target="_blank"><img src="{{ asset('bundles/odiseoapp/images/logooscar.png') }}" alt="Logo Oscar Lopez" title="Logo Oscar Lopez"></a>
+
+            <div class="donate">
+                <p class="redbold">{{ 'odiseo.donate.title'|trans|raw }}</p>
+                <p>{{ 'odiseo.donate.text'|trans|raw }}
+                </p>
+            </div>
+
+        </div>
+        <div class="contefree">
+            <h2 id="titufree" class="helvetica-ultralight">{{ 'odiseo.free.title'|trans }}</h2>
+            <div id="freeconte" class="helvetica-ultralight bold">
+                <p>{{ preference.textFreeOscarLocale(app.request.locale)|raw}}</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p><span class="textfree">{{ 'odiseo.footer.title'|trans }}</span></p>
+    </footer>
+{% endblock %}

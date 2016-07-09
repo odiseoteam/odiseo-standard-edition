@@ -1,0 +1,39 @@
+Odiseo\Bundle\AppBundle\Entity\News:
+    type: entity
+    table: odiseo_news
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        text:
+            column: name
+            type: text
+        textEs:
+            column: name_es
+            type: text
+        imageName:
+            column: image_name
+            type: string
+        createdAt:
+            type: datetime
+            nullable: false
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            nullable: true
+            gedmo:
+                timestampable:
+                    on: update
+    manyToOne:
+        preference:
+          targetEntity: Odiseo\Bundle\AppBundle\Entity\Preferences
+          inversedBy: news
+          joinColumn:
+            name: preference_id
+            referencedColumnName: id
+            onDelete: CASCADE

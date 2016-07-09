@@ -1,0 +1,62 @@
+.vertical-align {
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.avenir-light{
+    font-family: 'Avenir Light';
+}
+
+
+.btn.btn-default, .btn.btn-primary, .btn.btn-secondary{
+    background-color: #5b5e5f;
+    color:#fff;
+    width: 100%;
+    height: 50px;
+    font-size: 14.8pt;
+    border: none;
+    border-radius: 0
+}
+.btn.btn-primary{
+    background-color: #fff;
+    color:#C52821;
+}
+.btn.btn-secondary{
+    background-color: #C52821;
+    color:#fff;
+}
+
+.red{
+    color: #ED2924 !important;
+}
+.redbold{
+    color: #ED2924 !important;
+    font-family: 'helvetica_neueregular_bold' !important;
+}
+.no-margin-right{
+    margin-right: 0;
+}
+.letter-spacing-1{
+    letter-spacing: -1px;
+    float: left;
+    padding-left: 8px;
+}
+/* base */
+.helvetica-ultralight{
+	font-family: 'helvetica_neueregular_ultralight' !important;
+	
+}
+.footer-font{
+	font-family: 'helvetica_neueregular_bold' !important;
+}
+.oscarlogo img {
+	width: 80%;
+}
+.bold{
+    font-weight: bold !important;
+}
+footer{
+    
+    font-family: 'helvetica_neueregular_bold' !important;
+}

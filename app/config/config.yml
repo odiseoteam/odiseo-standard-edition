@@ -2,9 +2,13 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
-    - { resource: odiseo.yml }
-    - { resource: admin.yml }
-    - { resource: '@OdiseoProjectBundle/Resources/config/app/main.yml' }
+    - { resource: doctrine_extensions.yml }
+    - { resource: admin/ }
+    - { resource: @OdiseoAppBundle/Resources/config/app/main.yml }
+
+parameters:
+    locale: en
+    odiseo_backend.homepage_route: odiseo_app_backend_dashboard
 
 framework:
     #esi:             ~
@@ -16,9 +20,9 @@ framework:
     form:            ~
     csrf_protection: ~
     validation:      { enable_annotations: true }
+    #serializer:      { enable_annotations: true }
     templating:
         engines: ['twig']
-        #assets_version: SomeVersionScheme
     default_locale:  "%locale%"
     trusted_hosts:   ~
     trusted_proxies: ~
@@ -36,20 +40,15 @@ twig:
 # Assetic Configuration
 assetic:
     debug:          "%kernel.debug%"
-    use_controller: false
-    bundles:        [ OdiseoBackendBundle, EasyAdminBundle ]
-    #java: /usr/bin/java
+    use_controller: '%kernel.debug%'
+    bundles:        [ OdiseoAppBundle, OdiseoBackendBundle, EasyAdminBundle ]
     filters:
         cssrewrite: ~
-        #closure:
-        #    jar: "%kernel.root_dir%/Resources/java/compiler.jar"
-        #yui_css:
-        #    jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
 
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver:   "%database_driver%"
+        driver:   pdo_mysql
         host:     "%database_host%"
         port:     "%database_port%"
         dbname:   "%database_name%"
@@ -65,6 +64,7 @@ doctrine:
 
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
+        naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
 # Swiftmailer Configuration

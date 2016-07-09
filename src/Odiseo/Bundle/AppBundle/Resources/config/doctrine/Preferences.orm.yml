@@ -1,0 +1,44 @@
+Odiseo\Bundle\AppBundle\Entity\Preferences:
+    type: entity
+    table: odiseo_preferences
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+            textBiography:
+                column: text_biography
+                type: text
+            textCaso:
+                column: text_caso
+                type: text
+            textFreeOscar:
+                column: text_free_oscar
+                type: text
+            textBiographyEs:
+                column: text_biography_es
+                type: text
+            textCasoEs:
+                column: text_caso_es
+                type: text
+            textFreeOscarEs:
+                column: text_free_oscar_es
+                type: text
+            datetimeCountdown:
+                type: datetime
+                nullable: false
+    oneToMany:
+        news:
+          targetEntity: Odiseo\Bundle\AppBundle\Entity\News
+          mappedBy: preference
+          cascade: ["persist", "merge"]
+        images:
+          targetEntity: Odiseo\Bundle\AppBundle\Entity\GaleryImage
+          mappedBy: preference
+          cascade: ["persist", "merge"]
+        videos:
+          targetEntity: Odiseo\Bundle\AppBundle\Entity\Video
+          mappedBy: preference
+          cascade: ["persist", "merge"]

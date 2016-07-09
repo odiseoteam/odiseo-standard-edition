@@ -1,0 +1,7 @@
+parameters:
+services:
+    #sylius.translation.translatable_listener.doctrine.orm:
+     #   class: "%sylius.translation.translatable_listener.doctrine.orm.class%"
+     #   arguments: ["@sylius.resource_registry", "@sylius.translation.locale_provider"]
+     #   tags:
+     #       - { name: "doctrine.event_subscriber", connection: "default", priority: "99" }

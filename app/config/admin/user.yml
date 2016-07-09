@@ -1,0 +1,17 @@
+easy_admin:
+    entities:
+        User:
+            label: 'Usuarios'
+            class: Odiseo\Bundle\AppBundle\Entity\User
+            form:
+                fields: ['username', 'email', { property: 'isEnabled', type: 'checkbox' }, 'salt', 'password']
+            list:
+                title: '%%entity_label%%'
+                fields: ['id', 'username', 'email', { property: 'isEnabled', type: 'toggle' }, 'lastLogin']
+            edit:
+                title:  'Editar usuario %%entity_id%%'
+            new:
+                title:  'Nuevo usuario'
+            show:
+                title:  'Usuario %%entity_id%%'
+                fields: ['username', 'email', 'isEnabled']

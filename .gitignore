@@ -3,6 +3,8 @@
 
 # Symfony directories
 /vendor/
+bin/*
+app/*\.cache
 app/logs/*
 app/cache/*
 web/css/*
@@ -31,6 +33,7 @@ behat.yml
 .project
 
 #Others
+.idea
 .DS_Store
 bin/behat
 bin/doctrine*
@@ -41,4 +44,6 @@ bin/phpcrodm
 bin/phpcrodm.php
 bin/jackalope
 bin/phpunit
-logs
+
+deploy/deploy.rb
+deploy/stages/*.rb

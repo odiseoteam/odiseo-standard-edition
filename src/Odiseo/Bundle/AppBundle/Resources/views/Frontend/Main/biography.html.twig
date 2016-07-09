@@ -1,0 +1,24 @@
+{% extends 'OdiseoAppBundle:Frontend:layout.html.twig' %}
+{% block bodyClass %}biografia{% endblock %}
+
+{% block content %}
+    <div id="biografia">
+        <div class="oscarlogo">
+            <a href="http://www.antrocket.com/en/freeoscarlopeznow" target="_blank"><img src="{{ asset('bundles/odiseoapp/images/logooscar.png') }}" alt="Logo Oscar Lopez" title="Logo Oscar Lopez"></a>
+        </div>
+        <div class="contebio">
+            <h2 class="helvetica-ultralight">{{ 'odiseo.bio.title'|trans }}</h2>
+            <div class="texto-biografia helvetica-ultralight bold">
+                <p>
+                    {{ preference.textBiographyLocale(app.request.locale)|raw}}
+                </p>
+            </div>
+        </div>
+        <div class="pierna">
+            <img src="{{ asset('bundles/odiseoapp/images/pierna.png') }}" alt="">
+        </div>
+    </div>
+    <footer>
+        <p><span>{{ 'odiseo.footer.title'|trans }}</span></p>
+    </footer>
+{% endblock %}

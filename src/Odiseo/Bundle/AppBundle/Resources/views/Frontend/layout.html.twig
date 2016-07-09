@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="free oscar">
+    <meta name="author" content="Free Oscar">
+    <title>Free Oscar López</title>
+
+    <link href="{{ asset('bundles/odiseoapp/images/favicon.png') }}" rel="icon" type="image/png">
+
+    {% block stylesheets %}
+        {% stylesheets output='css/frontend.min.css' filter='cssrewrite'
+        'bundles/odiseoapp/css/bootstrap.min.css'
+        'bundles/odiseoapp/css/base.css'
+        'bundles/odiseoapp/css/font.css'
+        'bundles/odiseoapp/css/style.css'
+        'bundles/odiseoapp/css/main.css'
+        'bundles/odiseoapp/css/media-query.css'
+
+        %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+        {% endstylesheets %}
+    {% endblock %}
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+
+<body class="{% block bodyClass %}home{% endblock %}">
+    <div class="container">
+        <!-- CABECERA - LOGO + MENU + INTRODUCCIÓN -->
+        <div class="cabecerabio">
+            <div class="redes">
+                <a href="https://www.facebook.com/FreeOscarLopezNow"  target="_blank"><img src="{{ asset('bundles/odiseoapp/images/facebook.png') }}" class="img-responsive"></a>
+                <a href="https://twitter.com/FreeOscarLopez" target="_blank"><img src="{{ asset('bundles/odiseoapp/images/twitter.png') }}" class="img-responsive"></a>
+                <a href="https://www.instagram.com/freeoscarlopeznow/" target="_blank"><img src="{{ asset('bundles/odiseoapp/images/instagram logo transparent.png') }}" class="img-responsive"></a>
+                {{ locale_switcher() }}
+            </div>
+
+            <div class="menubio">
+                <a href="#menu" id="enlace-menubio"><img src="{{ asset('bundles/odiseoapp/images/botonmenu.png') }}"></a>
+                <div id="menubio" class="navegacion">
+                    <ul>
+                        <li class="menu-home-oscar">
+                            <a href="{{ path('odiseo_app_frontend_homepage') }}">
+                                <img src="{{ asset('bundles/odiseoapp/images/fondo-home.png') }}" class="img-responsive">
+                                <span>{{ 'odiseo.header.home'|trans }}</span>
+                            </a>
+                        </li>
+                        <li class="menu-free-oscar">
+                            <a href="{{ path('odiseo_app_frontend_free_oscar') }}">
+                                <img src="{{ asset('bundles/odiseoapp/images/fondo-free.png') }}" class="img-responsive">
+                                <span>{{ 'odiseo.header.freeoscar'|trans }}</span>
+                            </a>
+                        </li>
+                        <li class="menu-biografia-oscar">
+                            <a href="{{ path('odiseo_app_frontend_biography') }}">
+                                <img src="{{ asset('bundles/odiseoapp/images/fondo-bio.png') }}" class="img-responsive">
+                                <span>{{ 'odiseo.header.biography'|trans }}</span>
+                            </a>
+                        </li>
+                        <li class="menu-caso-oscar">
+                            <a href="{{ path('odiseo_app_frontend_reasons') }}">
+                                <img src="{{ asset('bundles/odiseoapp/images/fondo-caso.png') }}" class="img-responsive">
+                                <span>{{ 'odiseo.header.reasons'|trans }}</span>
+                            </a>
+                        </li>
+                        <li class="menu-noti-oscar">
+                            <a href="{{ path('odiseo_app_frontend_news') }}">
+                                <img src="{{ asset('bundles/odiseoapp/images/fondo-noticias.png') }}" class="img-responsive">
+                                <span>{{ 'odiseo.header.news'|trans }}</span>
+                            </a>
+                        </li>
+                        <li class="menu-gale-oscar">
+                            <a href="{{ path('odiseo_app_frontend_photo') }}">
+                                <img src="{{ asset('bundles/odiseoapp/images/fondo-gale.png') }}" class="img-responsive">
+                                <span>{{ 'odiseo.header.photos'|trans }}</span>
+                            </a>
+                        </li>
+                        <li class="menu-videos-oscar">
+                            <a href="{{ path('odiseo_app_frontend_video') }}">
+                                <img src="{{ asset('bundles/odiseoapp/images/fondo-videos.png') }}" class="img-responsive">
+                                <span>{{ 'odiseo.header.videos'|trans }}</span>
+                            </a>
+                        </li>
+                        <li class="menu-paginas-oscar no-margin-right">
+                            <a href="{{ path('odiseo_app_frontend_pages') }}">
+                                <img src="{{ asset('bundles/odiseoapp/images/fondo-paginas.png') }}" class="img-responsive">
+                                <span>{{ 'odiseo.header.pages'|trans }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+    {% block javascripts %}
+        {% javascripts output='js/frontend.min.js'
+        'bundles/odiseoapp/js/jquery-1.11.2.min.js'
+        'bundles/odiseoapp/js/bootstrap.min.js'
+        'bundles/odiseoapp/js/jquery.plugin.min.js'
+        'bundles/odiseoapp/js/jquery.countdown.js'
+        'bundles/odiseoapp/js/javascript.js'
+        'bundles/odiseoapp/js/home.js'
+        %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dragdealer/0.9.8/dragdealer.min.js"></script>
+        {% endjavascripts %}
+    {% endblock %}
+</body>
+</html>

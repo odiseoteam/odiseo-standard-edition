@@ -1,0 +1,36 @@
+Odiseo\Bundle\AppBundle\Entity\Video:
+    type: entity
+    table: odiseo_video
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            column: title
+            type: string
+        link:
+            column: name
+            type: string
+        createdAt:
+            type: datetime
+            nullable: false
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            nullable: true
+            gedmo:
+                timestampable:
+                    on: update
+    manyToOne:
+        preference:
+          targetEntity: Odiseo\Bundle\AppBundle\Entity\Preferences
+          inversedBy: videos
+          joinColumn:
+            name: preference_id
+            referencedColumnName: id
+            onDelete: CASCADE

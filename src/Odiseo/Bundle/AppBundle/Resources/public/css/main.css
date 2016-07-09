@@ -1,0 +1,882 @@
+@media screen and (max-width: 1001px){
+	.visible-xs {
+		display: block!important;
+	}
+	.hidden-xs{
+	
+		display: none!important;
+	}
+
+    #menubio {
+        background-color: #ffffff;
+    }
+
+    #menubio ul {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #menubio li {
+        margin: 10px 0;
+        width: auto;
+        float: none;
+    }
+
+    #menubio li a span {
+        font-size: 12px;
+    }
+
+    body.biografia #menubio {
+        background-color: #eabf33;
+    }
+
+	body.noticias #menubio {
+        background-color: #aa67a5;
+    }
+
+    body.galeria #menubio {
+        background-color: #009bdb;
+    }
+
+    /* home */
+    
+    .home .oscarlogo .donate {
+        float: left;
+        width: 30%;
+        text-align: left;
+        margin-top: 20px;
+        font-family: 'helvetica_neueregular_bold';
+    }
+    .home .oscarlogo .donate .redbold{
+        
+        font-size: 20px;
+    }
+    .home .oscarlogo .donate {
+        float: left;
+        width: 65%;
+        text-align: left;
+        margin-top: 20px;
+        font-family: 'helvetica_neueregular_bold';
+        color: black;
+    }
+    
+    .home .oscarlogo .donate p:first-child {
+        font-size: 5vw;
+        font-family: 'helvetica_neueregular_bold';
+    }
+    .home .oscarlogo .donate p:last-child {
+        font-size: 3vw;
+    }
+    .home .oscarlogo img {
+        float: right;
+    }
+    .home .countdown-period {
+        font-size: 25px;
+        padding-bottom: 20px;   
+        font-family: 'helvetica_neueregular_thin';
+    }
+    .home .countdown-amount {
+        font-size: 13vw;
+        font-family: 'helvetica_neueregular_ultralight';
+    }
+    .home .footerhome .year p {
+        font-family: 'helvetica_neueregular_bold';
+        font-size: 2vw;
+    }
+    
+    
+    
+	/* noticias */
+	.oscarlogo-noti2 {
+		width: 100%;
+		text-align: center;
+		margin: 10px auto;
+	}
+	.oscarlogo-noti {
+		width: 0%;
+		text-align: center;
+		margin: 10px auto;
+	}
+	.expo-noticias {
+		margin-top: 0;
+		width: 0;
+		height: 0;
+		float: left;
+		display: inline-block;
+		text-align: center;
+	}
+	.expo-noticias2 {
+		margin-top: 50px;
+		height: 50px;
+		float: left;
+		display: inline-block;
+        width: 100%;
+        text-align: right;
+	}
+	.oscarlogo-noti img {
+		width: 0;
+	}
+	.slide-derecho2 {
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+	}
+	.slide-derecho2 img {
+		width: 50%;
+		margin-bottom: 0;
+	}
+	.noti-recuadro2 {
+		margin-top: 0;
+		margin-right: 0;
+		height: 50px;
+		display: inline-block;
+	}
+    .noti-recuadro2 p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+	.cuadros-noticias {
+		width: 0;
+		height: 0;
+		display: inline-block;
+		text-align: center;
+	}
+	.noti-recuadro {
+		margin-top: 20px;
+		margin-right: 15px;
+		width: 0;
+		height: 0;
+		-moz-border-radius: 55px;
+		-webkit-border-radius: 55px;
+		border-radius: 55px;
+		background-color: white;
+		display: inline-block;
+	}
+    body.noticias {
+        background-image: none !important;
+    }
+	.slide-izquierdo {
+		width: 0px;
+		height: 0px;
+		display: inline-block;
+		margin-right: 20px;
+	}
+	.slide-izquierdo img {
+		width: 0%;
+		margin-bottom: 0px;
+	}
+	.slide-derecho {
+		width: 0px;
+		height: 0px;
+		display: inline-block;
+	}
+	.slide-derecho img {
+		width: 0%;
+		margin-bottom: 0px;
+	}
+	/* PAGINAS */ 
+/* PAGINAS */
+    body.paginas{
+        background-color: #5da8e1;
+        overflow-y: inherit;
+    }
+
+    body.paginas #pagina-fondo  .oscarlogo img{
+        margin-top: 70%;
+        width: 100%;
+    }
+    body.paginas #pagina-fondo .oscarlogo h2{
+        font-size: 4vw;
+    }
+    body.paginas #pagina-fondo  .oscarlogo{
+        margin-top: 0;
+        width: 20%;
+        float: left;
+        margin-top: 0;
+    }
+    body.paginas #pagina-fondo  .contepaginas{
+
+        display: inline-block;
+        width: 550px;
+        left: 31%;
+        min-height: inherit;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 20%;
+    }
+    body.paginas #pagina-fondo  .expositor {
+        display: inline-block;
+        width: 100%;
+        min-height: inherit;
+        background: url('../images/fondo-expositor.png') top no-repeat;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        width: 80%;
+        margin: 0;
+        left: 0;
+        top: 0;
+        padding: 0;
+    }
+    body.paginas .pag-images {
+        position: relative;
+        width: 100%;
+    }
+    body.paginas .pag-images img{
+        position: absolute;
+        width: 20%;
+    }
+    body.paginas .pag-images img.pag1{
+        left: 9%;
+        margin-top: 50px;
+    }
+    body.paginas .pag-images .pag2{
+        left: 36%;
+        width: 38%;
+        margin-top: 120px;
+    }
+    body.paginas .pag-images .pag3{
+        left: 9%;
+        width: 38%;
+        margin-top: 215px;
+    }
+    body.paginas .pag-images .pag4{
+        left: 49%;
+        width: 26%;
+        margin-top: 260px;
+    }
+    body.paginas .pag-images .pag5{
+        left: 9%;
+        width: 28%;
+        margin-top: 360px;
+    }
+
+
+    body.paginas .titu-paginas {
+        float: right;
+        margin-top: 17%;
+        width: 20%;
+    }
+    /* caso */
+    #logo-oscar-caso img {
+        float: left;
+        width: 80%;
+    }
+    #logo-oscar-caso {
+        margin-top: 5%;
+        width: 25%;
+    }
+    .contecaso {
+        width: 65%;
+    }
+    /* FREE */
+    body.free #freeoscar .contefree {
+
+    }
+    body.free #freeoscar .oscarlogo a {
+        float: right;
+    }
+    body.free #freeoscar .donate {
+        position: absolute;
+        top: 39%;
+        margin-top: 25px;
+        right: 2%;
+    }
+    /* video */
+
+    body.videos{
+        background-image: none !important;
+    }
+    footer {
+        padding: 15px 10px;
+    }
+    .film img.play {
+        top: 41% !important;
+    }
+    body.free .oscarlogo .donate p:last-child {
+        font-size: 2vw !important;
+    }
+    body.free .oscarlogo .donate p:first-child {
+        font-size: 3vw !important;
+    }
+}
+/* FIN MAX WIDTH **/
+
+@media screen and (min-width: 1001px){
+    .mensahome p {
+        font-family: 'helvetica_neueregular_bold';
+        font-size: 3vw;
+        color:#ED2924;
+        line-height: 46px;
+    }
+    #menubio > li:last-child {
+        margin-right: 0;
+    }
+    #menubio li a:hover {
+        color: black;
+    }
+    /* home */
+    .oscarlogo img {
+        width: 100%;
+    }
+    .countdown-period {
+        font-size: 30px;
+        font-family: 'helvetica_neueregular_thin';
+    }
+    .countdown-amount {
+        margin-top: 70px;
+        font-size: 11vw;
+        color: #0c0d08;
+        width: 100%;
+        font-family: 'helvetica_neueregular_ultralight';
+    }
+    .countdown-row.countdown-show4{
+        margin-left: 1vw;
+    }
+    .footerhome {
+        margin-top: 2%;
+        padding: 0px 20px 0 20px;
+    }
+    .footerhome .donate {
+        float: left;
+        width: 30%;
+        text-align: left;
+        margin-top: -12px;
+        font-family: 'helvetica_neueregular_bold';
+    }
+    .footerhome .donate .redbold{
+        font-size: 2.5vw;
+    }
+    .footerhome p {
+        font-size: 1.5vw;
+        font-family: 'helvetica_neueregular_bold';
+    }
+    .footerhome .year p {
+        font-family: 'helvetica_neueregular_bold';
+        font-size: 1.5vw;
+    }
+    .footerhome .year {
+        width: 70%;
+        float: right;
+        margin-top: -60px;
+    }
+    span.dot{
+        font-size: 12vw;
+        color: red;
+        border-radius: 8px;
+    }
+
+    .countdown-amount {
+        font-size: 10vw !important;
+    }
+    span.dot {
+        font-size: 9vw !important;
+    }
+    
+    /* NOTICIAS */
+    
+    #fondo-noti{
+          background-color: #aa67a5;	
+        background: url('../images/fondonoti.jpg') right no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+
+
+    }
+
+    #fondonoticias{
+        min-height: 730px;
+
+    }
+
+    .oscarlogo-noti{ width: 20%;
+                float: left;
+                margin-top: 170px;
+                margin-left: 20px;
+    }
+
+    .oscarlogo-noti img{	width: 70%;}
+
+    .oscarlogo-noti2{ width: 0%;
+                float: left;
+                margin-top: 170px;
+                margin-left: 20px;
+    }
+
+    .oscarlogo-noti2 img{	width: 0%;}
+
+
+    #titunoti{
+        color:#d68700;	
+        margin-bottom: 20px;
+    }
+
+    .ima-noti{
+        width: 25%;
+        float: left;
+        margin-right: 0px;	
+        margin-top: -50px;
+    }
+
+    #noticonte{max-height: 250px;
+        overflow-y: scroll; 
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .expo-noticias{
+        margin-top: 50px;
+        width: 100%;
+        height: 150px;
+        float: left;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .cuadros-noticias{
+        width: 600px;
+        height: 140px;
+        display: inline-block;
+        text-align: center;
+
+    }
+
+    .slide-izquierdo{
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    .slide-izquierdo img{
+        width: 50%;
+        margin-bottom: 50px;
+    }
+    .slide-derecho{
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+    }
+
+    .slide-derecho img{
+        width: 50%;
+        margin-bottom: 50px;
+
+    }
+
+    .noti-recuadro{
+        margin-top: 20px;
+        margin-right: 15px;
+        width: 110px;
+        height: 110px;
+        /*para Firefox*/
+        -moz-border-radius: 55px;
+        /*para Safari y Chrome*/
+        -webkit-border-radius: 55px;
+        /* para Opera */
+        border-radius: 55px;
+        background-color: white;
+        display: inline-block;
+    }
+    .noti-recuadro img{
+
+        -webkit-border-radius: 55px;
+        border-radius: 55px;
+    }
+    .cuadros-noticias2{
+        width: 0px;
+        height: 0px;
+        display: inline-block;
+        text-align: right;
+
+    }
+
+    .expo-noticias2{
+        margin-top: 50px;
+        width: 0%;
+        height: 0px;
+        float: left;
+        display: inline-block;
+
+        text-align: center;
+    }
+    .slide-derecho2{
+        width: 0px;
+        height: 0px;
+        display: inline-block;
+
+    }
+
+    .slide-derecho2 img{
+        width: 50%;
+        margin-bottom: 50px;
+
+    }
+
+    .noti-recuadro2{
+        width: 0px;
+        height: 0px;
+        font-size: 0px;
+    display: none;
+    }
+    /* VIDEOS */
+    .tituvideo {
+        float: left;
+        width: 70%;
+        text-align: left;
+        margin-top: 179px;
+		font-size: 8vw;
+    }
+    .film-desktop{
+        background: url('../images/frame-videos-desktop.png') right no-repeat;
+        width: 83%;
+        height: 219px;
+        top: 54%;
+        position: absolute;
+        right: 0;
+    }
+    .film-desktop .film{
+        width: 10%;
+        height: 80%;
+        padding-top: 3%;
+        margin: 0 1% 0 1%;
+        float: left;
+        position: relative;
+    }
+    /* base */
+    .titulo-font{
+        font-family: 'helvetica_neueregular_ultralight';
+    }
+    .parrafo-font{
+        font-family: 'helvetica_neueregular_ultralight';
+        
+    }
+    .footer-font{
+        font-family: 'helvetica_neueregular_bold';
+    }
+    .oscarlogo img {
+        width: 80%;
+    }
+    /* pag */
+    body.paginas{
+        overflow-y: hidden;
+    }
+}
+/* fin min width */
+.titulo-font{
+    font-family: 'helvetica_neueregular_ultralight';
+}
+.film-mobile{
+    width: 100%;
+    position: relative;
+    height: 500px;
+}
+.film-mobile .film{
+    width: 22%;
+    height: 80%;
+    padding-top: 6%;
+    margin: 0 0% 0 2%;
+    float: left;
+    position: relative;
+}
+.film-mobile .film1, .film-mobile .film2{
+    width: 90%;
+    height: 219px;
+}
+.film-mobile .film1{
+    background: url('../images/frame-videos-desktop.png') right no-repeat;
+    top: 3%;
+    position: absolute;
+    right: 0;
+}
+.film-mobile .film2{
+    background: url('../images/frame-videos-desktop.png') right no-repeat;
+    top: 55%;
+    position: absolute;
+    left: 0;
+}
+/* video */
+body.videos{
+    background: url('../images/oscar-foto-video.png')  no-repeat fixed;
+    background-position: right bottom;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background-color: #F15A29;
+}
+.contenedor-video {
+    margin-top: 0; 
+	margin-left: -30px;
+    margin-right: -30px;
+    width: auto;
+}
+#logo-video {
+    margin-top: 0px;
+    text-align: left;
+    width: 23%;
+    margin-left: 30px;
+}
+.tituvideo {
+    width: 60%;
+    text-align: left;
+    margin-top: 0;
+    height: 100%;
+}
+.tituvideo p {
+
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+    font-size: 8vw;
+}
+#logo-video img{
+    width: 60%;
+}
+.logo-titulo{
+	
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.film img.ytpreview{
+    border-radius: 15px;
+    width:100%;
+    height:100%;
+}
+.film img.play{
+    position: absolute;
+    top: 50%;
+   /* transform: translateY(-50%);*/
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* NOTICIAS */
+
+body.noticias{
+	background: #aa67a5 url('../images/fondo-foto-noticias.png') no-repeat;
+	-webkit-background-size: auto 100%;
+	-moz-background-size: auto 100%;
+	-o-background-size: auto 100%;
+    background-size: auto 100%;
+    background-position: right -74px;
+}
+body.noticias .container {
+	min-height: 730px;
+}
+
+#news-slider {
+    width: 50%;
+    max-width: 550px;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    background: none;
+    width: 10%;
+}
+
+.carousel-control img {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    width: 20px;
+}
+
+.carousel-control.left img {
+    left: 0;
+}
+
+.carousel-control.right img {
+    right: 0;
+}
+
+/* FREE */
+body.free {
+    min-height: 660px;
+    background: url('../images/foto-oscar-bg-free-oscar-now.png') no-repeat fixed;
+    background-position: left bottom;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background-color: #dddc1b;
+}
+.contefree {
+    position: absolute;
+    bottom: 15%;
+    right: 2%;
+}
+#freeoscar .donate {
+    float: right;
+    width: 30%;
+    text-align: left;
+    margin-top: -40px;
+    font-family: 'helvetica_neueregular_bold';
+    color: black;
+}
+#freeoscar .donate p{
+    font-family: 'helvetica_neueregular_bold';
+}
+body.free .oscarlogo .donate p:first-child {
+    font-size: 30px;
+}
+body.free .oscarlogo .donate p:last-child {
+    font-size: 20px;
+}
+body.free .oscarlogo{
+    width: 100%;
+    margin-top: 6%;
+}
+body.free .oscarlogo a{
+    display: block;
+    width: 30%;
+    float: left;
+}
+body.free .oscarlogo img{
+    width: 50%;
+}
+#titufree {
+    font-size: 4vw;
+}
+
+
+
+/* GALERIA */
+body.galeria {
+    background-color: #009bdb;
+    float: none;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+}
+body.galeria .container{
+    background-color: #009bdb;
+}
+
+/* PAGINAS */
+body.paginas{
+    background-color: #6596bc;
+}
+body.paginas .container{
+    background-color: #6596bc;
+}
+
+body.paginas .oscarlogo img{
+    margin-top: 60%;
+}
+body.paginas .oscarlogo h2{
+    font-size: 4vw;
+}
+body.paginas .oscarlogo{
+    margin-top: 0;
+}
+body.paginas .contepaginas{
+    
+    display: inline-block;
+    width: 550px;
+    left: 34%;
+    min-height: inherit;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 20%;
+}
+body.paginas .expositor {
+    display: inline-block;
+    width: 100%;
+    min-height: inherit;
+    background: url('../images/fondo-expositor.png') top no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 80%;
+    margin: 0;
+    left: 0;
+    top: 0;
+    padding: 0;
+}
+body.paginas .pag-images {
+    position: relative;
+    width: 100%;
+}
+body.paginas .pag-images img{
+    position: absolute;
+    width: 20%;
+}
+body.paginas .pag-images img.pag1{
+    left: 9%;
+    margin-top: 50px;
+}
+body.paginas .pag-images .pag2{
+    left: 36%;
+    width: 38%;
+    margin-top: 120px;
+}
+body.paginas .pag-images .pag3{
+    left: 9%;
+    width: 38%;
+    margin-top: 215px;
+}
+body.paginas .pag-images .pag4{
+    left: 49%;
+    width: 26%;
+    margin-top: 260px;
+}
+body.paginas .pag-images .pag5{
+    left: 11%;
+    width: 21%;
+    margin-top: 320px;
+}
+
+
+body.paginas .titu-paginas {
+    float: right;
+    margin-top: 17%;
+    width: 20%;
+}
+
+
+
+
+
+
+/*EL CASO */
+body.caso{
+	
+    background-color: #cd92bb;
+}
+body.caso .container{
+
+    background-color: #cd92bb;
+	padding:0;
+}
+body.caso .cabecerabio{
+	
+    background: url('../images/oscarazul.png') center center no-repeat;
+	background-size:cover;
+    min-height: 200px;
+    padding: 20px 30px;
+}
+
+
+.modal-dialog{
+    height: 80%;
+    width:75%;
+}
+.modal-dialog iframe{
+    border-radius: 15px;
+}
+.locale_chooser{
+    display: inline-block;
+    font-family: 'helvetica_neueregular_bold';
+}

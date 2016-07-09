@@ -1,0 +1,101 @@
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    user_class: Odiseo\Bundle\AppBundle\Entity\User
+
+twig:
+    globals:
+        locale: '%locale%'
+
+lunetics_locale:
+    guessing_order:
+        - query
+        - router
+        - session
+        - cookie
+        - browser
+    allowed_locales:
+        - en
+        - es
+    cookie:
+        set_on_change: true
+
+knp_gaufrette:
+    stream_wrapper: ~
+    adapters:
+        image_adapter:
+            local:
+                directory: %kernel.root_dir%/../web/media/images
+                create:    true
+        file_adapter:
+            local:
+                directory: %kernel.root_dir%/../web/media/files
+                create: true
+    filesystems:
+        images_fs:
+            adapter:   image_adapter
+        files_fs:
+            adapter:   file_adapter
+
+vich_uploader:
+   db_driver: orm # or mongodb or propel or phpcr
+   storage:   gaufrette
+   mappings:
+        images:
+            uri_prefix:         /images
+            upload_destination: images_fs
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        files:
+            uri_prefix:         /files
+            upload_destination: files_fs
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+
+liip_imagine:
+    loaders:
+        default:
+            filesystem:
+                data_root: %kernel.root_dir%/../web/media/images
+    filter_sets:
+        cache: ~
+        gallery:
+            filters:
+                thumbnail: { size: [550, 550], mode: outbound }
+        project_gallery:
+            filters:
+                thumbnail: { size: [900, 600], mode: inset }
+
+
+a2lix_translation_form:
+    locale_provider: default
+    locales: [en, es]
+    default_locale: en
+    required_locales: [en, es]
+    manager_registry: doctrine
+    templating: "A2lixTranslationFormBundle::default.html.twig"
+
+sylius_resource:
+    resources:
+        odiseo.user:
+            driver: doctrine/orm
+            classes:
+                model: Odiseo\Bundle\AppBundle\Entity\User
+                repository: Odiseo\Bundle\AppBundle\Repository\UserRepository
+        odiseo.news:
+            driver: doctrine/orm
+            classes:
+                model: Odiseo\Bundle\AppBundle\Entity\News
+                repository: Odiseo\Bundle\AppBundle\Repository\NewsRepository
+        odiseo.video:
+            driver: doctrine/orm
+            classes:
+                model: Odiseo\Bundle\AppBundle\Entity\Video
+                repository: Odiseo\Bundle\AppBundle\Repository\VideoRepository
+        odiseo.preferences:
+                driver: doctrine/orm
+                classes:
+                    model: Odiseo\Bundle\AppBundle\Entity\Preferences
+                    repository: Odiseo\Bundle\AppBundle\Repository\PreferencesRepository

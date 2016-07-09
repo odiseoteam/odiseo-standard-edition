@@ -1,0 +1,55 @@
+{% extends 'OdiseoAppBundle:Frontend:layout.html.twig' %}
+{% block bodyClass %}videos{% endblock %}
+
+{% block content %}
+    <div class="contenedor-video">
+        <div class="logo-titulo clearfix">
+            <div class="oscarlogo" id="logo-video">
+                <a href="http://www.antrocket.com/en/freeoscarlopeznow" target="_blank"><img src="{{ asset('bundles/odiseoapp/images/logooscar.png') }}" alt="Logo Oscar Lopez" title="Logo Oscar Lopez"></a>
+            </div>
+            <div class="tituvideo titulo-font">
+                <p>{{ 'odiseo.video.title'|trans }}</p>
+            </div>
+        </div>
+        <div class="video-gallery">
+            <div class="film-desktop hidden-xs">
+                {% for video in preference.videos %}
+                <div class="film">
+                    <a data-toggle="modal" href="{{ '#modalVdeo'~video.id }}"><img src="{{ 'http://img.youtube.com/vi/'~video.link~'/hqdefault.jpg' }}" class="ytpreview">
+                    <img src="{{ asset('bundles/odiseoapp/images/play.png') }}" class="play img-responsive">
+                    </a>
+                </div>
+                {% endfor %}
+                </div>
+            </div>
+            <div class="film-mobile visible-xs">
+                <div class="film1">
+                    {% for video in preference.videos %}
+                    <div class="film">
+                        <a data-toggle="modal" href="{{ '#modalVdeo'~video.id }}"><img src="{{ 'http://img.youtube.com/vi/'~video.link~'/hqdefault.jpg' }}" class="ytpreview">
+                        <img src="{{ asset('bundles/odiseoapp/images/play.png') }}" class="play img-responsive">
+                        </a>
+                    </div>
+                {% if loop.index == 4 %}
+                </div>
+                <div class="film2">
+                {% endif %}
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <p><span class="textvideo">{{ 'odiseo.footer.title'|trans }}</span></p>
+    </footer>
+    <!-- Modal -->
+    {% for video in preference.videos %}
+    <div class="modal fade" id="{{'modalVdeo'~video.id}}" role="dialog">
+        <div class="modal-dialog">
+            <iframe width="100%" height="100%" src="{{ 'https://www.youtube.com/embed/'~video.link }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

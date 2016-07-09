@@ -1,0 +1,27 @@
+{% extends 'OdiseoAppBundle:Frontend:layout.html.twig' %}
+{% block bodyClass %}paginas{% endblock %}
+
+{% block content %}
+    <div id="pagina-fondo">
+        <div class="oscarlogo">
+            <div class="titu-paginas">
+                <h2 class="helvetica-ultralight">{{ 'odiseo.pages.title'|trans }}</h2>
+            </div>
+            <a href="http://www.antrocket.com/en/freeoscarlopeznow" target="_blank"><img src="{{ asset('bundles/odiseoapp/images/logooscar.png') }}" alt="Logo Oscar Lopez" title="Logo Oscar Lopez"></a>
+        </div>
+        <div class="contepaginas">
+            <div class="expositor helvetica-ultralight bold">
+                <div class="pag-images">
+                    <a href="https://www.facebook.com/32XOscar" target="_blank"><img src="{{ asset('bundles/odiseoapp/images/oscarx32.png') }}" class="pag1"></a>
+                    <a href="http://www.redbetances.com/" target="_blank"><img src="{{ asset('bundles/odiseoapp/images/red-betances.png') }}"class="pag2"></a>
+                    <a href="https://www.facebook.com/groups/972272236136217/" target="_blank"><img src="{{ asset('bundles/odiseoapp/images/enlacalle.png') }}" class="pag3">	</a>
+                    <a href="https://www.facebook.com/events/1007981935962901/" target="_blank"><img src="{{ asset('bundles/odiseoapp/images/oscar-ya.png') }}" class="pag4"></a>
+                    <a href="http://www.libertadparaoscar.org/" target="_blank"><img src="{{ asset('bundles/odiseoapp/images/libertad.png') }}" class="pag5"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p><span class="textpagi">{{ 'odiseo.footer.title'|trans }}</span></p>
+    </footer>
+{% endblock %}

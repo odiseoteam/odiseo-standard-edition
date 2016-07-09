@@ -1,3 +1,12 @@
-#app:
-#    resource: "@YourAppBundle/Resources/config/main.yml"
-#    prefix:   /
+odiseo_app:
+    resource: "@OdiseoAppBundle/Resources/config/routing/main.yml"
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

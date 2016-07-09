@@ -1,0 +1,8 @@
+{% if value != 'facebookId' %}
+<a href="https://facebook.com/{{ value }}" target="_blank">
+    <img src="https://graph.facebook.com/v2.5/{{ value }}/picture?type=square" class="img-circle">
+    {{ value }}
+</a>
+{% else %}
+    -
+{% endif %}

@@ -1,0 +1,40 @@
+{% extends 'OdiseoAppBundle:Frontend:layout.html.twig' %}
+{% block bodyClass %}galeria{% endblock %}
+
+{% block content %}
+    <div class="contegale">
+        <div class="oscarlogo">
+            <a href="http://www.antrocket.com/en/freeoscarlopeznow" target="_blank"><img src="{{ asset('bundles/odiseoapp/images/logooscar.png') }}" alt="Logo Oscar Lopez" title="Logo Oscar Lopez"></a>
+        </div>
+        <div class="galeria">
+            <h2 id="titugaleria" class="helvetica-ultralight">{{ 'odiseo.photo.title'|trans }}</h2>
+            <div id="gallery-slider" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    {% for image in preference.images %}
+                    {% set imageUrl = image.imageName|imagine_filter('gallery') %}
+                    <div class="item {%  if loop.index == 1   %}active{% endif %}">
+                        <div class="marco">
+                            <div class="foto" style="{{ 'background: url('~imageUrl~') no-repeat;background-size:contain;' }}"> <!-- style="background: url('../images/foto1.png');"-->
+                                <img src="{{ asset('bundles/odiseoapp/images/marco.png') }}">
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#gallery-slider" role="button" data-slide="prev">
+                    <img src="{{ asset('bundles/odiseoapp/images/flechaizq.png') }}">
+                </a>
+                <a class="right carousel-control" href="#gallery-slider" role="button" data-slide="next">
+                    <img src="{{ asset('bundles/odiseoapp/images/flechadere.png') }}">
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <p><span class="textgale">{{ 'odiseo.footer.title'|trans }}</span></p>
+    </footer>
+
+{% endblock %}

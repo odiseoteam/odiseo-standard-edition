@@ -1,0 +1,21 @@
+{% extends 'OdiseoAppBundle:Frontend:layout.html.twig' %}
+{% block bodyClass %}caso{% endblock %}
+
+{% block content %}
+    <hr class="barrita">
+    <div id="fondo-caso">
+        <div class="oscarlogo" id="logo-oscar-caso">
+            <a href="http://www.antrocket.com/en/freeoscarlopeznow" target="_blank"><img src="{{ asset('bundles/odiseoapp/images/logooscar.png') }}" alt="Logo Oscar Lopez" title="Logo Oscar Lopez"></a>
+        </div>
+        <div class="contecaso ">
+            <h2 id="titucaso" class="helvetica-ultralight">{{ 'odiseo.reasons.title'|trans }}</h2>
+            <div class="casotext helvetica-ultralight bold">
+
+                <p>{{ preference.textCasoLocale(app.request.locale)|raw}}</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p><span class="textcaso">{{ 'odiseo.footer.title'|trans }}</span></p>
+    </footer>
+{% endblock %}

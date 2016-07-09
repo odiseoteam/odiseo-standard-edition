@@ -1,0 +1,37 @@
+odiseo:
+    header:
+       home: Homepage
+       freeoscar: Free Oscar López NOW
+       biography: Biography
+       reasons: Reasons for release
+       news: News
+       photos: Photos
+       videos: Videos
+       pages: Pages about Oscar
+    home:
+       title: This is the time President Obama has left in the Oval office; join us in demanding Free Oscar Now!
+       footer1: Oscar López Rivera, 35 years in confinement
+       footer2: is enough
+       days: Days
+       hour: Hours
+       minutes: Minutes
+       seconds: Seconds
+    bio:
+       title: Biography
+    free:
+       title: Free Oscar López NOW
+    news:
+       title: News
+    pages:
+       title: Pages
+    photo:
+       title: Photos
+    video:
+       title: Vídeos
+    reasons:
+       title: Reasons for release
+    donate:
+       title: Donate and join us!
+       text: to make possible<br>Free Oscar Lopez Now, The event<br>at Washington DC
+    footer:
+       title: '#FreeOscarLopezNow'

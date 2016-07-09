@@ -1,0 +1,35 @@
+odiseo_app_frontend_homepage:
+    path:     /
+    defaults: { _controller: "OdiseoAppBundle:Frontend/Main:index" }
+
+odiseo_app_frontend_biography:
+    path:     /biography
+    defaults: { _controller: "OdiseoAppBundle:Frontend/Main:biography" }
+
+odiseo_app_frontend_reasons:
+    path:     /reasons
+    defaults: { _controller: "OdiseoAppBundle:Frontend/Main:reasons" }
+
+odiseo_app_frontend_free_oscar:
+    path:     /free-oscar
+    defaults: { _controller: "OdiseoAppBundle:Frontend/Main:freeOscar" }
+
+odiseo_app_frontend_news:
+    path:     /news
+    defaults: { _controller: "OdiseoAppBundle:Frontend/Main:news" }
+
+odiseo_app_frontend_news_show:
+    path:     /news/{id}
+    defaults: { _controller: "OdiseoAppBundle:Frontend/Main:news" }
+
+odiseo_app_frontend_photo:
+    path:     /photos
+    defaults: { _controller: "OdiseoAppBundle:Frontend/Main:photo" }
+
+odiseo_app_frontend_video:
+    path:     /videos
+    defaults: { _controller: "OdiseoAppBundle:Frontend/Main:video" }
+
+odiseo_app_frontend_pages:
+    path:     /pages
+    defaults: { _controller: "OdiseoAppBundle:Frontend/Main:pages" }
