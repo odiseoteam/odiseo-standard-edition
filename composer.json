@@ -49,6 +49,9 @@
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
+        },
+        "branch-alias": {
+            "1.0": "1.0"
         }
     }
 }
