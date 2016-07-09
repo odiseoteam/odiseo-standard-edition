@@ -1,22 +1,22 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "odiseoteam/odiseo-standard-edition",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "The Odiseo's \"Symfony Standard Edition\" distribution",
     "autoload": {
         "psr-4": { "": "src/" },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
     "require": {
         "php": ">=5.3.9",
-	"odiseoteam/odiseo-project-bundle" : "0.6.*",
-	"odiseoteam/odiseo-backend-bundle" : "0.5.*",
+	    "odiseoteam/odiseo-project-bundle" : "0.6.*",
+	    "odiseoteam/odiseo-backend-bundle" : "0.5.*",
     	"friendsofsymfony/user-bundle" : "2.0.x-dev",
     	"hwi/oauth-bundle": "^0.4.1",
     	"friendsofsymfony/jsrouting-bundle": "^1.6",
     	"egeloen/ckeditor-bundle": "^4.0",
         "lunetics/locale-bundle": "2.2.*",
-	"a2lix/translation-form-bundle": "^2.1"
+	    "a2lix/translation-form-bundle": "^2.1"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
@@ -41,10 +41,7 @@
         ]
     },
     "config": {
-        "bin-dir": "bin",
-        "platform": {
-            "php": "5.3.9"
-        }
+        "bin-dir": "bin"
     },
     "extra": {
         "symfony-app-dir": "app",

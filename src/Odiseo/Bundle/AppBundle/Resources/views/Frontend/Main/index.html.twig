@@ -1,58 +1,5 @@
 {% extends 'OdiseoAppBundle:Frontend:layout.html.twig' %}
 
 {% block content %}
-    <div id="home-section">
-        <div class="mensahome hidden-xs">
-            <p>{{ 'odiseo.home.title'|trans|raw }}</p>
-        </div>
-        <div class="oscarlogo" id="logo-home">
-            <div class="donate visible-xs hidden-sm">
-                <p class="redbold">{{ 'odiseo.donate.title'|trans|raw }}</p>
-                <p>{{ 'odiseo.donate.text'|trans|raw }}
-                </p>
-            </div>
-            <a href="http://www.antrocket.com/en/freeoscarlopeznow" target="_blank">
-                <img src="{{ asset('bundles/odiseoapp/images/logooscar.png') }}" alt="Logo Oscar Lopez" title="Logo Oscar Lopez">
-            </a>
-        </div>
-        <div class="contehome" data-final-date="{{ preference.datetimeCountdown|date('Y/m/d H:i:s') }}">
-            <span id="defaultCountdown" class="countdown"></span>
-
-		<span class="countdown is-countdown">
-			<span class="countdown-row countdown-show4">
-				<div class="countdown-section">
-                    <p class="countdown-period">{{ 'odiseo.home.days'|trans|raw }}</p>
-                    <p class="countdown-amount days">150</p>
-                </div>
-				<span class="dot">:</span>
-				<div class="countdown-section">
-                    <p class="countdown-period">{{ 'odiseo.home.hour'|trans|raw }}</p>
-                    <p class="countdown-amount hours">21</p>
-                </div>
-				<span class="dot">:</span>
-				<div class="countdown-section">
-                    <p class="countdown-period">{{ 'odiseo.home.minutes'|trans|raw }}</p>
-                    <p class="countdown-amount minutes">07</p>
-                </div>
-				<span class="dot">:</span>
-				<div class="countdown-section">
-                    <p class="countdown-period">{{ 'odiseo.home.seconds'|trans|raw }}</p>
-                    <p class="countdown-amount seconds" id="rojito">18</p>
-                </div>
-			 </span>
-		</span>
-        </div>
-    </div>
-    <div class="footerhome">
-        <div class="donate hidden-xs">
-            <p class="redbold">{{ 'odiseo.donate.title'|trans|raw }}</p>
-            <p>{{ 'odiseo.donate.text'|trans|raw }}
-            </p>
-        </div>
-        <div class="year">
-            <p id="izq">{{ 'odiseo.home.footer1'|trans|raw }}</p>
-            <img id="ima-home" src="{{ asset('bundles/odiseoapp/images/oscar-foto-home.png') }}">
-            <p id="dere">{{ 'odiseo.home.footer2'|trans|raw }}</p>
-        </div>
-    </div>
+   <h1>Welcome to Odiseo Standard Edition</h1>
 {% endblock %}

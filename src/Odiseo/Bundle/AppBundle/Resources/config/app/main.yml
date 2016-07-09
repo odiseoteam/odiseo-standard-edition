@@ -27,15 +27,9 @@ knp_gaufrette:
             local:
                 directory: %kernel.root_dir%/../web/media/images
                 create:    true
-        file_adapter:
-            local:
-                directory: %kernel.root_dir%/../web/media/files
-                create: true
     filesystems:
         images_fs:
             adapter:   image_adapter
-        files_fs:
-            adapter:   file_adapter
 
 vich_uploader:
    db_driver: orm # or mongodb or propel or phpcr
@@ -44,12 +38,7 @@ vich_uploader:
         images:
             uri_prefix:         /images
             upload_destination: images_fs
-            inject_on_load:     false
-            delete_on_update:   true
-            delete_on_remove:   true
-        files:
-            uri_prefix:         /files
-            upload_destination: files_fs
+            namer:              vich_uploader.namer_uniqid
             inject_on_load:     false
             delete_on_update:   true
             delete_on_remove:   true
@@ -61,13 +50,9 @@ liip_imagine:
                 data_root: %kernel.root_dir%/../web/media/images
     filter_sets:
         cache: ~
-        gallery:
+        square:
             filters:
                 thumbnail: { size: [550, 550], mode: outbound }
-        project_gallery:
-            filters:
-                thumbnail: { size: [900, 600], mode: inset }
-
 
 a2lix_translation_form:
     locale_provider: default
@@ -75,7 +60,6 @@ a2lix_translation_form:
     default_locale: en
     required_locales: [en, es]
     manager_registry: doctrine
-    templating: "A2lixTranslationFormBundle::default.html.twig"
 
 sylius_resource:
     resources:
@@ -84,18 +68,3 @@ sylius_resource:
             classes:
                 model: Odiseo\Bundle\AppBundle\Entity\User
                 repository: Odiseo\Bundle\AppBundle\Repository\UserRepository
-        odiseo.news:
-            driver: doctrine/orm
-            classes:
-                model: Odiseo\Bundle\AppBundle\Entity\News
-                repository: Odiseo\Bundle\AppBundle\Repository\NewsRepository
-        odiseo.video:
-            driver: doctrine/orm
-            classes:
-                model: Odiseo\Bundle\AppBundle\Entity\Video
-                repository: Odiseo\Bundle\AppBundle\Repository\VideoRepository
-        odiseo.preferences:
-                driver: doctrine/orm
-                classes:
-                    model: Odiseo\Bundle\AppBundle\Entity\Preferences
-                    repository: Odiseo\Bundle\AppBundle\Repository\PreferencesRepository
