@@ -68,3 +68,5 @@ sylius_resource:
             classes:
                 model: Odiseo\Bundle\AppBundle\Entity\User
                 repository: Odiseo\Bundle\AppBundle\Repository\UserRepository
+                form:
+                    default: Odiseo\Bundle\AppBundle\Form\Type\UserType

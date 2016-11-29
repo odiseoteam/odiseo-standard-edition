@@ -1,0 +1,35 @@
+{% macro showParticipantSocialLink(participant, text) %}
+    {% set socialUrl = '' %}
+    {% if participant.platformType == 'twitter' %}
+        {% set socialUrl = 'https://twitter.com/'~participant.username %}
+    {% elseif participant.platformType == 'facebook' %}
+        {% set socialUrl = '' %}
+    {% elseif participant.platformType == 'instagram' %}
+        {% set socialUrl = 'https://www.instagram.com/'~participant.username %}
+    {% endif %}
+<a href="{{ socialUrl }}" target="_blank">{{ text|raw }}</a>
+{% endmacro %}
+
+{% macro showPostSocialLink(post, text) %}
+    {% set socialUrl = '' %}
+    {% if post.platformType == 'twitter' %}
+        {% set socialUrl = 'https://twitter.com/'~post.participant.username~'/status/'~post.platformId %}
+    {% elseif post.platformType == 'facebook' %}
+        {% set socialUrl = '#' %}
+    {% elseif post.platformType == 'instagram' %}
+        {% set socialUrl = 'https://instagram.com/p/'~post.platformId %}
+    {% endif %}
+    <a href="{{ socialUrl }}" target="_blank">{{ text|raw }}</a>
+{% endmacro %}
+
+{% macro showPlatformType(platformType) %}
+    {% set labelColor = '' %}
+    {% if platformType == 'twitter' %}
+        {% set labelColor = ' label-default' %}
+    {% elseif platformType == 'facebook' %}
+        {% set labelColor = ' label-primary' %}
+    {% elseif platformType == 'instagram' %}
+        {% set labelColor = ' label-warning' %}
+    {% endif %}
+    <span class="label{{ labelColor }}">{{ platformType }}</span>
+{% endmacro %}

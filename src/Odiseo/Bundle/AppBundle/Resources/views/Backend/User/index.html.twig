@@ -1,0 +1,45 @@
+{% extends 'OdiseoBackendBundle::layout.html.twig' %}
+
+{% import 'OdiseoAppBundle:Backend/Macros:buttons.html.twig' as buttons %}
+{% import 'OdiseoAppBundle:Backend/Macros:alerts.html.twig' as alerts %}
+{% from 'OdiseoAppBundle:Backend/Macros:misc.html.twig' import pagination %}
+{% from 'OdiseoAppBundle:Backend/User:macros.html.twig' import list %}
+
+{% block content_title %}
+    <h1><i class="fa fa-user"></i> Usuarios</h1>
+{% endblock %}
+
+{% block content %}
+<div class="box box-solid">
+    <div class="box-body page-header">
+        <div class="actions-menu">
+            {{ buttons.create(path('odiseo_admin_user_create'), 'Nuevo usuario') }}
+        </div>
+    </div>
+</div>
+
+{#<div class="box">
+    <div class="box-header with-border">
+        <h1 class="box-title"><i class="fa fa-filter"></i> Filter</h1>
+    </div>
+    <div class="box-body">
+        {% render(controller('sylius.controller.backend.form:filterAction', {'type': 'sylius_user_filter', 'template': 'SyliusWebBundle:Backend/User:filterForm.html.twig'})) %}
+    </div>
+</div>#}
+
+    {% if users|length > 0 %}
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            {{ pagination(users) }}
+        </div>
+        <div class="box-body table-responsive no-padding">
+            {{ list(users) }}
+        </div>
+        <div class="box-footer">
+            {{ pagination(users) }}
+        </div>
+    </div>
+    {% else %}
+        {{ alerts.info('No hay usuarios') }}
+    {% endif %}
+{% endblock %}

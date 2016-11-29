@@ -1,0 +1,42 @@
+{% macro list(users) %}
+
+{% import 'OdiseoAppBundle:Backend/Macros:buttons.html.twig' as buttons %}
+{% import 'OdiseoAppBundle:Backend/Macros:alerts.html.twig' as alerts %}
+{% import 'OdiseoAppBundle:Backend/Macros:misc.html.twig' as misc %}
+
+<table id="users" class="table table-hover">
+    <thead>
+        <tr>
+            <th>{{ sylius_resource_sort('id', '#id') }}</th>
+            <th>{{ sylius_resource_sort('username', 'Usuario') }}</th>
+            <th>{{ sylius_resource_sort('email', 'Email') }}</th>
+            <th>{{ sylius_resource_sort('enabled', 'Habilado?') }}</th>
+            <th>{{ sylius_resource_sort('lastLogin', 'Ultimo login') }}</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr id="{{ user.id }}" data-user="{{ user.email }}">
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+                <a href="{{ path('odiseo_admin_user_'~(user.enabled?'disable':'enable'), {'id': user.id}) }}">
+                    <span class="label label-{{ user.enabled?'success':'danger' }}">{{ user.enabled?'Si':'No' }}</span>
+                </a>
+            </td>
+            <td>{{ user.lastLogin|date('d/m/Y H:i') }}</td>
+            <td>
+                <div class="pull-right">
+                    {{ buttons.edit(path('odiseo_admin_user_update', {'id': user.id})) }}
+                    {% if user.id is not sameas(app.user.id) %}
+                        {{ buttons.delete(path('odiseo_admin_user_delete', {'id': user.id}), null, null) }}
+                    {% endif %}
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endmacro %}

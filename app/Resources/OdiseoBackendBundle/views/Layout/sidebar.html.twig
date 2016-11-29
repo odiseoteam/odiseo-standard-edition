@@ -1,0 +1,71 @@
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+	<!-- sidebar: style can be found in sidebar.less -->
+	<section class="sidebar">
+
+		{% if app.user %}
+		<!-- Sidebar user panel (optional) -->
+		<div class="user-panel">
+			<div class="pull-left image">
+				{% image 'bundles/odiseobackend/img/AdminLTE/avatar7.gif' %}
+    			<img src="{{ asset_url }}" class="img-circle" alt="User Image" />
+				{% endimage %}
+			</div>
+			<div class="pull-left info">
+				<p>{{ app.user.username|default('Administrator')|capitalize }}</p>
+				<!-- Status -->
+				<a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+			</div>
+		</div>
+		{% endif %}
+
+		<!-- search form (Optional) -->
+		<!--<form action="#" method="get" class="sidebar-form">
+			<div class="input-group">
+				<input type="text" name="q" class="form-control" placeholder="Search..."/>
+					<span class="input-group-btn">
+						<button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+					</span>
+            </div>
+		</form>-->
+		<!-- /.search form -->
+
+		<!-- Sidebar Menu -->                    
+		{% block navigation %}
+		<ul class="sidebar-menu">
+			<li class="header">MENU</li>
+			<!-- Optionally, you can add icons to the links -->			
+			{% block navigation_items %}
+            {#<li>
+                <a href="{{ path('odiseo_admin_location_index') }}">
+                    <i class="fa fa-map-marker"></i> <span>Localizaciones</span>
+                </a>
+            </li>#}
+            <li class="header">SISTEMA</li>
+            <li>
+                <a href="{{ path('odiseo_admin_user_index') }}">
+                    <i class="fa fa-user"></i> <span>Usuarios</span>
+                </a>
+            </li>
+			{#% for item in easyadmin_config('entities') %}
+			<li class="{{ item.name|lower == app.request.get('entity')|lower ? 'active' : '' }}">
+				<a href="{{ path('easyadmin', { entity: item.name, action: 'list' }) }}">
+					<i class="fa fa-circle-thin"></i> <span>{{- item.label|trans -}}</span>
+				</a>
+			</li>
+			{% endfor %}#}
+            <!-- <li class="treeview">
+				<a href="#"><span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
+				<ul class="treeview-menu">
+					<li><a href="#">Link in level 2</a></li>
+					<li><a href="#">Link in level 2</a></li>
+				</ul>
+			</li> -->
+			{% endblock %}
+		</ul><!-- /.sidebar-menu -->
+		{% endblock %}
+		
+		{% block header_footer %}{% endblock %}
+	</section>
+	<!-- /.sidebar -->
+</aside>

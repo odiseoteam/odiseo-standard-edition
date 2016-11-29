@@ -1,0 +1,14 @@
+{% form_theme form 'OdiseoAppBundle:Backend:forms.html.twig' %}
+
+<div class="row">
+    <div class="col-md-12">
+        <fieldset>
+            {{ form_row(form.username) }}
+            {{ form_row(form.email) }}
+            {{ form_row(form.plainPassword) }}
+            {{ form_row(form.enabled) }}
+        </fieldset>
+    </div>
+</div>
+
+{{ form_rest(form) }}
