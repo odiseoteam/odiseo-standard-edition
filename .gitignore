@@ -1,18 +1,27 @@
 # Bootstrap
-/app/bootstrap*
+/var/bootstrap*
 
 # Symfony directories
 /vendor/
-bin/*
-app/*\.cache
-app/logs/*
-app/cache/*
+/build/
+/phpunit.xml
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+!var/SymfonyRequirements.php
 web/css/*
 web/js/*
 web/admin/css/*
 web/admin/js/*
 web/uploads/*
-web/bundles/*
+/web/bundles/
 web/assets/compiled/*
 web/media/*
 /composer.lock

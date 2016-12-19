@@ -10,13 +10,6 @@
 
     <link href="{{ asset('bundles/odiseoapp/images/favicon.png') }}" rel="icon" type="image/png">
 
-    {% block stylesheets %}
-        {% stylesheets output='css/frontend.min.css' filter='cssrewrite'
-        %}
-        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
-        {% endstylesheets %}
-    {% endblock %}
-
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -24,13 +17,6 @@
 </head>
 <body>
     {% block content %}
-    {% endblock %}
-
-    {% block javascripts %}
-        {% javascripts output='js/frontend.min.js'
-        %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
-        {% endjavascripts %}
     {% endblock %}
 </body>
 </html>

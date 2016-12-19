@@ -4,7 +4,7 @@ imports:
     - { resource: services.yml }
     - { resource: doctrine_extensions.yml }
     - { resource: admin/ }
-    - { resource: @OdiseoAppBundle/Resources/config/app/main.yml }
+    - { resource: "@OdiseoAppBundle/Resources/config/app/main.yml" }
 
 parameters:
     locale: en
@@ -27,23 +27,19 @@ framework:
     trusted_hosts:   ~
     trusted_proxies: ~
     session:
-        # handler_id set to null will use default session handler from php.ini
-        handler_id:  ~
+        # http://symfony.com/doc/current/reference/configuration/framework.html#handler-id
+        handler_id:  session.handler.native_file
+        save_path:   "%kernel.root_dir%/../var/sessions/%kernel.environment%"
     fragments:       ~
     http_method_override: true
+    assets: ~
+    php_errors:
+        log: true
 
 # Twig Configuration
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
-
-# Assetic Configuration
-assetic:
-    debug:          "%kernel.debug%"
-    use_controller: '%kernel.debug%'
-    bundles:        [ OdiseoAppBundle, OdiseoBackendBundle, EasyAdminBundle ]
-    filters:
-        cssrewrite: ~
 
 # Doctrine Configuration
 doctrine:
@@ -55,7 +51,7 @@ doctrine:
         user:     "%database_user%"
         password: "%database_password%"
         charset:  UTF8
-        server_version: 5.6 # your database server version here
+        server_version: 5.6
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
         #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
