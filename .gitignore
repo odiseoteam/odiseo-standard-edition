@@ -24,8 +24,10 @@ web/uploads/*
 /web/bundles/
 web/assets/compiled/*
 web/media/*
+web/assets
+web/assets/*
 /composer.lock
-
+/node_modules/*
 
 # Configuration files
 app/config/parameters.ini
