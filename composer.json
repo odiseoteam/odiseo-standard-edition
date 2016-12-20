@@ -19,8 +19,8 @@
     },
     "require": {
         "php": ">=5.5.9",
-	    "odiseoteam/odiseo-project-bundle" : "dev-master",
-	    "odiseoteam/odiseo-backend-bundle" : "dev-master",
+	    "odiseoteam/odiseo-project-bundle" : "0.7.*",
+	    "odiseoteam/odiseo-backend-bundle" : "0.6.*",
     	"friendsofsymfony/user-bundle" : "2.0.x-dev",
     	"hwi/oauth-bundle": "^0.5",
     	"friendsofsymfony/jsrouting-bundle": "^1.6",
