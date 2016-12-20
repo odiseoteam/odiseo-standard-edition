@@ -21,3 +21,5 @@ TODO List
 
 - Remove OdiseoProjectBundle and move dependencies to this project.
 - Create a util Bundle to place some utilities for all projects.
+- Rename OdiseoBackendBundle to OdiseoAdminBundle.
+- Change the name of OdiseoAppBundle to some like ClientAppBundle and ClientAdminBundle.
