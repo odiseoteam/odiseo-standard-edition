@@ -1,0 +1,8 @@
+sylius_resource:
+    resources:
+        odiseo.user:
+            driver: doctrine/orm
+            classes:
+                model: Odiseo\Bundle\AppBundle\Entity\User
+                repository: Odiseo\Bundle\AppBundle\Repository\UserRepository
+                form: Odiseo\Bundle\AppBundle\Form\Type\UserType

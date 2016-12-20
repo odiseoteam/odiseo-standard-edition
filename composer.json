@@ -1,4 +1,4 @@
-{
+  {
     "name": "odiseoteam/odiseo-standard-edition",
     "license": "MIT",
     "type": "project",
@@ -20,7 +20,7 @@
     "require": {
         "php": ">=5.5.9",
 	    "odiseoteam/odiseo-project-bundle" : "dev-master",
-	    "odiseoteam/odiseo-backend-bundle" : "0.5.*",
+	    "odiseoteam/odiseo-backend-bundle" : "dev-master",
     	"friendsofsymfony/user-bundle" : "2.0.x-dev",
     	"hwi/oauth-bundle": "^0.5",
     	"friendsofsymfony/jsrouting-bundle": "^1.6",
@@ -37,7 +37,7 @@
     "scripts": {
         "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundlyye\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",

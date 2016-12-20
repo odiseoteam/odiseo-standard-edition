@@ -4,7 +4,7 @@ imports:
     - { resource: services.yml }
     - { resource: doctrine_extensions.yml }
     - { resource: admin/ }
-    - { resource: "@OdiseoAppBundle/Resources/config/app/main.yml" }
+    - { resource: "@OdiseoAppBundle/Resources/config/app/config.yml" }
 
 parameters:
     locale: en

@@ -4,6 +4,7 @@ namespace Odiseo\Bundle\AppBundle\Form\Type;
 
 use FOS\UserBundle\Util\LegacyFormHelper;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 class UserType extends AbstractResourceType
@@ -20,7 +21,7 @@ class UserType extends AbstractResourceType
                 'second_options' => array('label' => 'form.new_password_confirmation'),
                 'invalid_message' => 'fos_user.password.mismatch',
             ))
-            ->add('enabled', 'checkbox', array('label' => 'Habilitado?'))
+            ->add('enabled', CheckboxType::class, array('label' => 'Habilitado?'))
         ;
     }
 

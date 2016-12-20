@@ -6,7 +6,7 @@ odiseo_backend_security:
     resource: "@OdiseoBackendBundle/Resources/config/routing/security.yml"
 
 odiseo_admin_user:
-    prefix: /users
+    prefix: /
     resource: "@OdiseoAppBundle/Resources/config/routing/backend/user.yml"
 
 easy_admin:

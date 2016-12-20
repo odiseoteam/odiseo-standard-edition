@@ -1,2 +1,10 @@
 odiseo:
     ui:
+        username: Username
+        email: Email
+        last_login: Último login
+        enabled: Habilitado
+        actions: Acciones
+        users: Usuarios
+        edit_user: Editar usuario
+        new_user: Nuevo usuario

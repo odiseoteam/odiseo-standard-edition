@@ -3,19 +3,19 @@
 	<!-- sidebar: style can be found in sidebar.less -->
 	<section class="sidebar">
 
-		{% if app.user %}
-		<!-- Sidebar user panel (optional) -->
-		<div class="user-panel">
-			<div class="pull-left image">
-    			<img src="{{ asset('assets/odiseobackend/img/AdminLTE/avatar7.gif') }}" class="img-circle" alt="User Image" />
-			</div>
-			<div class="pull-left info">
-				<p>{{ app.user.username|default('Administrator')|capitalize }}</p>
-				<!-- Status -->
-				<a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-			</div>
-		</div>
-		{% endif %}
+        {% if app.user %}
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="{{ asset('assets/admin/img/AdminLTE/avatar7.gif') }}" class="img-circle" alt="User Image" />
+            </div>
+            <div class="pull-left info">
+                <p>{{ app.user.username|default('Administrator')|capitalize }}</p>
+                <!-- Status -->
+                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+        {% endif %}
 
 		<!-- search form (Optional) -->
 		<!--<form action="#" method="get" class="sidebar-form">

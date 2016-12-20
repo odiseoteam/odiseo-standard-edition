@@ -2,7 +2,6 @@
 /var/bootstrap*
 
 # Symfony directories
-/vendor/
 /build/
 /phpunit.xml
 /var/*
@@ -16,18 +15,16 @@
 /var/sessions/*
 !var/sessions/.gitkeep
 !var/SymfonyRequirements.php
-web/css/*
-web/js/*
-web/admin/css/*
-web/admin/js/*
-web/uploads/*
-/web/bundles/
-web/assets/compiled/*
-web/media/*
-web/assets
-web/assets/*
+/vendor/
+
+/web/css
+/web/js
+/web/bundles
+/web/uploads/*
+/web/media/*
+/web/assets
 /composer.lock
-/node_modules/*
+/node_modules
 
 # Configuration files
 app/config/parameters.ini

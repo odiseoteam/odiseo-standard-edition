@@ -1,50 +1,17 @@
-odiseo_admin_user_index:
-    path: /
-    methods: [GET]
-    defaults:
-        _controller: odiseo.controller.user:indexAction
-        _sylius:
-            template: OdiseoAppBundle:Backend\User:index.html.twig
-            sortable: true
-
-odiseo_admin_user_create:
-    path: /new
-    methods: [GET, POST]
-    defaults:
-        _controller: odiseo.controller.user:createAction
-        _sylius:
-            template: OdiseoAppBundle:Backend\User:create.html.twig
-            form: odiseo_user
-            redirect: odiseo_admin_user_index
-
-odiseo_admin_user_update:
-    path: /{id}/edit
-    methods: [GET, PUT, POST]
-    defaults:
-        _controller: odiseo.controller.user:updateAction
-        _sylius:
-            template: OdiseoAppBundle:Backend\User:update.html.twig
-            redirect: odiseo_admin_user_index
-
-odiseo_admin_user_delete:
-    path: /{id}
-    methods: [DELETE]
-    defaults:
-         _controller: odiseo.controller.user:deleteAction
-         _sylius:
-             template: OdiseoAppBundle:Backend\User:delete.html.twig
-             redirect: odiseo_admin_user_index
-
-odiseo_admin_user_enable:
-    path: /{id}/enable
-    defaults:
-         _controller: odiseo.controller.user:enableAction
-         _sylius:
-             redirect: odiseo_admin_user_index
-
-odiseo_admin_user_disable:
-    path: /{id}/disable
-    defaults:
-         _controller: odiseo.controller.user:disableAction
-         _sylius:
-             redirect: odiseo_admin_user_index
+odiseo_admin_user:
+    resource: |
+        alias: odiseo.user
+        section: admin
+        templates: OdiseoBackendBundle:Crud
+        except: ['show']
+        redirect: index
+        grid: odiseo_admin_user
+        permission: true
+        vars:
+            all:
+                subheader: sylius.ui.manage_currencies_available_in_the_store
+                templates:
+                    form: OdiseoAppBundle:Backend/User:_form.html.twig
+            index:
+                icon: user
+    type: sylius.resource
