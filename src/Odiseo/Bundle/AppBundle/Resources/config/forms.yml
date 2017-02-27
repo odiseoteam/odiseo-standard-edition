@@ -1,7 +1,0 @@
-parameters:
-services:
-    odiseo.form.type.user:
-        class: Odiseo\Bundle\AppBundle\Form\Type\UserType
-        arguments: ['%odiseo.model.user.class%']
-        tags:
-            - { name: form.type, alias: odiseo_contact_form }

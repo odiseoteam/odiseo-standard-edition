@@ -1,9 +1,0 @@
-easy_admin:
-    formats:
-        date:     'd/m/Y'
-        time:     'H:i'
-        datetime: 'd/m/Y H:i:s'
-    site_name: 'Dashboard'
-    list:
-        max_results: 15
-#        actions: [{ name: 'new', label: 'Nuevo', icon: 'new' }, { name: 'edit', label: 'Editar', css_class: 'btn btn-primary', icon: 'edit' }, { name: 'show', label: 'Detalles', css_class: 'btn btn-default', icon: 'eye' }]

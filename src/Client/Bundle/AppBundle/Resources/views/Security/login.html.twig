@@ -1,0 +1,29 @@
+{% extends 'ClientAppBundle::layout.html.twig' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <a href="{#{ path('hwi_oauth_service_redirect', {'service': 'facebook'}) }#}" class="btn facebook">Facebook</a>
+        <a href="{#{ path('hwi_oauth_service_redirect', {'service': 'twitter'}) }#}" name="button" class="btn twitter">Twitter</a>
+    </div>
+    <div class="col-md-6">
+        <h2>LOGIN</h2>
+        {% if error %}
+            <div class="alert alert-danger">
+                {{ error.messageKey|trans(error.messageData, 'security') }}
+            </div>
+        {% endif %}
+        <form class="" action="{{ path('client_app_login_check') }}" method="post">
+            <div>
+                <input type="text" name="_username" placeholder="Email">
+                <input type="password" name="_password" placeholder="Contraseña">
+            </div>
+            <button type="submit" class="btn">ENTRAR</button>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <h2>REGISTER</h2>
+        {#{ render(controller('ClientAppBundle:Register:form')) }#}
+    </div>
+</div>
+{% endblock %}

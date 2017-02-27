@@ -1,9 +1,28 @@
 odiseo_app:
-    resource: "@OdiseoAppBundle/Resources/config/routing/main.yml"
+    resource: "@ClientAppBundle/Resources/config/routing/main.yml"
     prefix:   /
 
-fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+odiseo_admin:
+    resource: "@ClientAdminBundle/Resources/config/routing/main.yml"
+    prefix:   /admin
+
+#hwi_oauth_redirect:
+#    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
+#    prefix:   /login
+
+#hwi_oauth_connect:
+#    resource: "@HWIOAuthBundle/Resources/config/routing/connect.xml"
+#    prefix:   /login
+
+#hwi_oauth_login:
+#    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
+#    prefix:   /login
+
+#facebook_login:
+#    path: /login/check-facebook
+
+#twitter_login:
+#    path: /login/check-twitter
 
 _liip_imagine:
     resource: "@LiipImagineBundle/Resources/config/routing.xml"

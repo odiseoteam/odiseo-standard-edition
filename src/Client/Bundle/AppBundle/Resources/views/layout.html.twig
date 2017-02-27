@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Odiseo Team">
+    <title>{% block title %}{% endblock %}</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{% block og_title %}{% endblock %}" />
+    <meta property="og:description" content="{% block og_description %}{% endblock %}" />
+    <meta property="og:image" content="{% block og_image %}{#{ absolute_url(asset('assets/app/images/facebook_share.png')) }#}{% endblock %}" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ block('og_title') }}">
+    <meta name="twitter:description" content="{{ block('og_description') }}">
+    <meta name="twitter:image" content="{{ block('og_image') }}">
+
+    <link href="{{ asset('assets/app/images/favicon.png') }}" rel="icon" type="image/png">
+
+    {% block stylesheets %}
+        <link href="{{ asset('assets/app/css/app.css') }}" rel="stylesheet" type="text/css">
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+
+    {% block javascripts %}
+        <script src="{{ asset('assets/app/js/app.js') }}"></script>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,17 @@
+client_app_user:
+    resource: |
+        alias: sylius.app_user
+        section: admin
+        templates: OdiseoAdminBundle:Crud
+        except: ['show']
+        redirect: index
+        grid: client_app_user
+        permission: true
+        vars:
+            all:
+                subheader: sylius.ui.manage_currencies_available_in_the_store
+                templates:
+                    form: ClientAdminBundle:AppUser:_form.html.twig
+            index:
+                icon: user
+    type: sylius.resource

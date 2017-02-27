@@ -2,29 +2,36 @@ var gulp = require('gulp');
 var chug = require('gulp-chug');
 var argv = require('yargs').argv;
 
-config_admin = [
+config_vendor = [
     '--rootPath',
     argv.rootPath || '../../../web/assets/',
     '--nodeModulesPath',
     argv.nodeModulesPath || '../../../node_modules/'
 ];
 
-config_app = [
+config_src = [
     '--rootPath',
     argv.rootPath || '../../../../web/assets/',
     '--nodeModulesPath',
     argv.nodeModulesPath || '../../../../node_modules/'
 ];
 
-gulp.task('admin', function() {
-    gulp.src('vendor/odiseoteam/odiseo-backend-bundle/Gulpfile.js', { read: false })
-        .pipe(chug({ args: config_admin }))
+gulp.task('odiseo-admin', function() {
+    gulp.src('vendor/odiseoteam/odiseo-admin-bundle/Gulpfile.js', { read: false })
+        .pipe(chug({ args: config_vendor }))
     ;
 });
 
-gulp.task('app', function() {
-    gulp.src('src/Odiseo/Bundle/AppBundle/Gulpfile.js', { read: false })
-        .pipe(chug({ args: config_app }))
+gulp.task('client-admin', function() {
+    gulp.src('src/Client/Bundle/AdminBundle/Gulpfile.js', { read: false })
+        .pipe(chug({ args: config_src }))
     ;
 });
-gulp.task('default', ['admin', 'app']);
+
+gulp.task('client-app', function() {
+    gulp.src('src/Client/Bundle/AppBundle/Gulpfile.js', { read: false })
+        .pipe(chug({ args: config_src }))
+    ;
+});
+
+gulp.task('default', ['odiseo-admin', 'client-admin', 'client-app']);

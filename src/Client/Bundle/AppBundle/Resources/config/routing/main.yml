@@ -1,0 +1,18 @@
+client_app_index:
+    path:     /
+    defaults: { _controller: "ClientAppBundle:Main:index" }
+
+client_app_security:
+    resource: "@ClientAppBundle/Resources/config/routing/security.yml"
+
+client_app_register:
+    path: /register
+    methods: [GET, POST]
+    defaults:
+        _controller: sylius.controller.app_user:createAction
+        _sylius:
+            template: "@ClientApp/Register/register.html.twig"
+            form: Client\Bundle\AppBundle\Form\Type\AppUserRegistrationType
+            event: register
+            redirect:
+                route: client_app_index

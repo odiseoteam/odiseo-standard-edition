@@ -1,8 +1,0 @@
-parameters:
-services:
-    odiseo.subscriber.user:
-        class: Odiseo\Bundle\AppBundle\EventListener\UserEventListener
-        calls:
-            - { method: setContainer, arguments: ['@service_container'] }
-        tags:
-            - { name: kernel.event_listener, event: 'odiseo.user.post_update', method: 'onUserUpdate' }

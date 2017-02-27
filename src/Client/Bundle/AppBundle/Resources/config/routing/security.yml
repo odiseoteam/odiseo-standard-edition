@@ -1,0 +1,18 @@
+client_app_login:
+    path: /login
+    methods: [GET]
+    defaults:
+        _controller: sylius.controller.user_security:loginAction
+        _sylius:
+            template: ClientAppBundle:Security:login.html.twig
+            permission: true
+
+client_app_login_check:
+    path: /login-check
+    methods: [POST]
+    defaults:
+        _controller: sylius.controller.user_security:checkAction
+
+client_app_logout:
+    path: /logout
+    methods: [GET]

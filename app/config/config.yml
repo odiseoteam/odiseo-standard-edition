@@ -3,12 +3,11 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
     - { resource: doctrine_extensions.yml }
-    - { resource: admin/ }
-    - { resource: "@OdiseoAppBundle/Resources/config/app/config.yml" }
+    - { resource: "@ClientAppBundle/Resources/config/app/config.yml" }
 
 parameters:
     locale: en
-    odiseo_backend.homepage_route: odiseo_app_backend_dashboard
+    odiseo_admin.homepage_route: client_admin_dashboard
 
 framework:
     #esi:             ~
@@ -40,6 +39,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        facebook_client_id: "%odiseo.facebook.client_id%"
 
 # Doctrine Configuration
 doctrine:

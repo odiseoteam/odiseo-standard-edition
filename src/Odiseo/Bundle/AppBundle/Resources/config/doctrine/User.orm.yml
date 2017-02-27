@@ -1,9 +1,0 @@
-Odiseo\Bundle\AppBundle\Entity\User:
-    type: entity
-    table: odiseo_user
-    id:
-        id:
-            type: integer
-            id: true
-            generator:
-                strategy: AUTO

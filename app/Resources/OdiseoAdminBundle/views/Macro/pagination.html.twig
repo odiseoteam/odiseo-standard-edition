@@ -1,0 +1,7 @@
+{% macro simple(paginator, options)  %}
+    {% import _self as pagination %}
+
+    {% if paginator.haveToPaginate() %}
+        {{ pagerfanta(paginator, 'twitter_bootstrap3_translated', options|default({})) }}
+    {% endif %}
+{% endmacro %}

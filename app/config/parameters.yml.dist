@@ -17,3 +17,8 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    odiseo.facebook.client_id: EDITME
+    odiseo.facebook.client_secret: EDITME
+    odiseo.twitter.client_id: EDITME
+    odiseo.twitter.client_secret: EDITME

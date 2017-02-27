@@ -1,0 +1,85 @@
+imports:
+    - { resource: "@ClientAdminBundle/Resources/config/app/config.yml" }
+    - { resource: "@ClientAppBundle/Resources/config/app/resources.yml" }
+
+stof_doctrine_extensions:
+    orm:
+        default:
+            timestampable: true
+
+twig:
+    globals:
+        locale: '%locale%'
+
+lunetics_locale:
+    guessing_order:
+        - query
+        - router
+        - session
+        - cookie
+        - browser
+    allowed_locales:
+        - en
+        - es
+    cookie:
+        set_on_change: true
+
+knp_gaufrette:
+    stream_wrapper: ~
+    adapters:
+        image_adapter:
+            local:
+                directory: "%kernel.root_dir%/../web/media/images"
+                create:    true
+    filesystems:
+        images_fs:
+            adapter:   image_adapter
+
+vich_uploader:
+   db_driver: orm # or mongodb or propel or phpcr
+   storage:   gaufrette
+   mappings:
+        images:
+            uri_prefix:         /images
+            upload_destination: images_fs
+            namer:              vich_uploader.namer_uniqid
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+
+liip_imagine:
+    loaders:
+        default:
+            filesystem:
+                data_root: "%kernel.root_dir%/../web/media/images"
+    filter_sets:
+        cache: ~
+        square:
+            filters:
+                thumbnail: { size: [550, 550], mode: outbound }
+
+a2lix_translation_form:
+    locale_provider: default
+    locales: [en, es]
+    default_locale: en
+    required_locales: [en, es]
+    manager_registry: doctrine
+
+#hwi_oauth:
+#    firewall_names: [main]
+#    resource_owners:
+#        facebook:
+#            type: facebook
+#            client_id: '%odiseo.facebook.client_id%'
+#            client_secret: '%odiseo.facebook.client_secret%'
+#            scope: "public_profile,email"
+#            paths:
+#                email: email
+#            options:
+#                display: popup #dialog is optimized for popup window
+#        twitter:
+#            type:                twitter
+#            client_id:           '%odiseo.twitter.client_id%'
+#            client_secret:       '%odiseo.twitter.client_secret%'
+#            options:
+#                include_email: true

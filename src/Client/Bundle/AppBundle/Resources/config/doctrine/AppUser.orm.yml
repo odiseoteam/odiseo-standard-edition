@@ -1,0 +1,3 @@
+Client\Bundle\AppBundle\Entity\AppUser:
+    type: entity
+    table: client_app_user

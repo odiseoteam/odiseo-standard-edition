@@ -1,3 +1,0 @@
-odiseo_app_frontend_homepage:
-    path:     /
-    defaults: { _controller: "OdiseoAppBundle:Frontend/Main:index" }

@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@ClientAdminBundle/Resources/config/grids/app_user.yml" }

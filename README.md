@@ -10,16 +10,16 @@ Installation
 ```bash
 sudo php composer.phar create-project odiseoteam/odiseo-standard-edition [path_to_project]
 cd [path_to_project]
+sudo php composer.phar update
+sudo php bin/console doctrine:database:create
+sudo php bin/console doctrine:schema:update --force
+sudo php bin/console doctrine:fixtures:load
+sudo rm -rf var/cache var/logs && sudo mkdir var/cache var/logs && sudo chmod -R 777 var/cache var/logs
 sudo npm install
-sudo npm run gulp
+sudo gulp
 sudo php bin/console server:start
-open http://localhost:8000/
 ```
+Open: http://localhost:8000/
 
 TODO List
 ---------------
-
-- Remove OdiseoProjectBundle and move dependencies to this project.
-- Create a util Bundle to place some utilities for all projects.
-- Rename OdiseoBackendBundle to OdiseoAdminBundle.
-- Change the name of OdiseoAppBundle to some like ClientAppBundle and ClientAdminBundle.

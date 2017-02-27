@@ -1,0 +1,7 @@
+parameters:
+services:
+    client_app.app_context_twig_extension:
+        class: Client\Bundle\AppBundle\Twig\AppContextExtension
+        public: false
+        tags:
+            - { name: twig.extension }

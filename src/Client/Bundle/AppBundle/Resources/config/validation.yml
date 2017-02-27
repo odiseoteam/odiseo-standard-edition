@@ -1,0 +1,12 @@
+Client\Bundle\AppBundle\Entity\AppUser:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: email
+            message: 'Email ya registrado'
+    properties:
+        password:
+            - NotBlank:
+                message: Tenés que completar el campo Contraseña
+        email:
+            - NotBlank:
+                message: Tenés que completar el campo Email

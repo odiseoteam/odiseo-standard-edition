@@ -1,7 +1,0 @@
-parameters:
-services:
-    odiseo.app_context_twig_extension:
-        class: Odiseo\Bundle\AppBundle\Twig\AppContextExtension
-        public: false
-        tags:
-            - { name: twig.extension }
