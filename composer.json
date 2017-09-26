@@ -44,16 +44,14 @@
         "a2lix/translation-form-bundle": "^2.1",
         "sylius/resource-bundle" : "^1.0@beta",
 
-        "odiseoteam/odiseo-util-bundle" : "dev-master",
-        "odiseoteam/odiseo-user-bundle" : "dev-master",
-        "odiseoteam/odiseo-admin-bundle" : "dev-master"
+        "odiseoteam/odiseo-util-bundle" : "^1.0",
+        "odiseoteam/odiseo-user-bundle" : "^1.0",
+        "odiseoteam/odiseo-admin-bundle" : "^1.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
         "symfony/phpunit-bridge": "^3.0"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "scripts": {
         "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
