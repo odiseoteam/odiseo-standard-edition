@@ -18,6 +18,10 @@ client_app_register_profile:
         _sylius:
             template: "@ClientApp/Register/register.html.twig"
             form: Client\Bundle\AppBundle\Form\Type\AppUserRegistrationType
+            repository:
+                method: find
+                arguments:
+                    - "expr:service('security.token_storage').getToken().getUser()"
             event: register
             redirect:
                 route: client_app_index

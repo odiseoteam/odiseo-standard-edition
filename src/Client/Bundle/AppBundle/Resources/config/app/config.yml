@@ -55,6 +55,7 @@ liip_imagine:
     filter_sets:
         cache: ~
         square:
+            quality : 80
             filters:
                 thumbnail: { size: [550, 550], mode: outbound }
 
