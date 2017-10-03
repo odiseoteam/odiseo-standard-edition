@@ -1,10 +1,11 @@
 {
   "dependencies": {
+    "animate.css": "^3.5.2",
     "bootstrap": "^3.3.7",
+    "chart.js": "^2.5.0",
     "font-awesome": "^4.7.0",
     "ionicons": "^2.0.1",
-    "jquery": "^2.2.0",
-    "chart.js": "^2.5.0"
+    "jquery": "^2.2.0"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

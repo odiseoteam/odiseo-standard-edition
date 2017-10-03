@@ -32,6 +32,11 @@
 		{% block navigation %}
 		<ul class="sidebar-menu">
 			<li class="header">MENU</li>
+		            <li>
+		                <a href="{{ path('sylius_admin_app_user_index') }}">
+		                    <i class="fa fa-user"></i> <span>Usuarios</span>
+		                </a>
+		            </li>
 			<!-- Optionally, you can add icons to the links -->			
 			{% block navigation_items %}
             {#<li>

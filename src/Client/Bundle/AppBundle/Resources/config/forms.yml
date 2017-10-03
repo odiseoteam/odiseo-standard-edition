@@ -2,6 +2,6 @@ parameters:
 services:
     client_app.form.type.app_user:
         class: Client\Bundle\AppBundle\Form\Type\AppUserRegistrationType
-        arguments: ['%sylius.model.app_user.class%']
+        arguments: ['%sylius.model.app_user.class%', ['app_user_registration']]
         tags:
             - { name: form.type, alias: client_app_registration }

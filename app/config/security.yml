@@ -1,12 +1,13 @@
 parameters:
     odiseo.security.admin_regex: "^/admin"
+    odiseo.security.app_regex: "^/"
 
 security:
     providers:
         admin_provider:
             id: sylius.admin_user_provider.email_or_name_based
         app_provider:
-            id: sylius.admin_user_provider.email_or_name_based
+            id: sylius.app_user_provider.email_or_name_based
 
     encoders:
         Sylius\Component\User\Model\UserInterface: sha512
@@ -32,22 +33,22 @@ security:
             
         main:
             context: app
-            pattern: ^/
+            pattern: "%odiseo.security.app_regex%"
             form_login:
                 provider: app_provider
                 login_path: client_app_login
                 check_path: client_app_login_check
                 failure_path: client_app_login
                 default_target_path: client_app_index
-#            oauth:
-#                resource_owners:
-#                    facebook: /login/check-facebook
-#                    twitter: /login/check-twitter
-#                login_path: odiseo_app_security_login
-#                failure_path: odiseo_app_security_login
-#                default_target_path: odiseo_app_participation_index
-#                oauth_user_provider:
-#                    service: odiseo_user.oauth_user.provider
+            oauth:
+                resource_owners:
+                    facebook: "/login/check-facebook"
+                    twitter: "/login/check-twitter"
+                login_path: client_app_login
+                failure_path: client_app_login
+                default_target_path: client_app_index
+                oauth_user_provider:
+                    service: client.oauth.user_provider
             logout:       true
             anonymous:    true
 

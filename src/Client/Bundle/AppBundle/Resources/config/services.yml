@@ -5,3 +5,15 @@ services:
         public: false
         tags:
             - { name: twig.extension }
+
+    client.oauth.user_provider:
+        class: Client\Bundle\AppBundle\OAuth\UserProvider
+        lazy: true
+        arguments:
+            - "%sylius.model.app_user.class%"
+            - "@sylius.factory.app_user"
+            - "@sylius.repository.app_user"
+            - "@sylius.factory.oauth_user"
+            - "@sylius.repository.oauth_user"
+            - "@sylius.manager.app_user"
+            - "@sylius.canonicalizer"

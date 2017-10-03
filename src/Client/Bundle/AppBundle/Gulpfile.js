@@ -20,11 +20,13 @@ var paths = {
         js: [
             nodeModulesPath + 'jquery/dist/jquery.min.js',
             nodeModulesPath + 'bootstrap/dist/js/bootstrap.min.js',
+            nodeModulesPath + 'jquery-validation/dist/jquery.validate.min.js',
             'Resources/private/js/main.js'
         ],
         css: [
             nodeModulesPath + 'bootstrap/dist/css/bootstrap.min.css',
             nodeModulesPath + 'font-awesome/css/font-awesome.min.css',
+            nodeModulesPath + 'animate.css/animate.min.css',
             'Resources/private/css/main.css'
         ],
         img: [
@@ -58,7 +60,7 @@ gulp.task('app-css', function () {
 gulp.task('app-img', function() {
     return gulp.src(paths.app.img)
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(appRootPath + 'images/'))
+        .pipe(gulp.dest(appRootPath + 'img/'))
     ;
 });
 

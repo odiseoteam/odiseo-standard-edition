@@ -8,10 +8,13 @@ sylius_grid:
             sorting:
                 lastLogin: desc
             fields:
-                username:
+                firstName:
                     type: string
-                    label: odiseo.ui.username
+                    label: client.ui.first_name
                     sortable: ~
+                lastName:
+                    type: string
+                    label: client.ui.last_name
                 email:
                     type: string
                     label: odiseo.ui.email
@@ -27,7 +30,19 @@ sylius_grid:
                     label: odiseo.ui.enabled
                     sortable: ~
                     options:
-                        template: "@OdiseoAdmin/Grid/Field/enabled.html.twig"
+                        template: "@OdiseoAdmin/Grid/Field/enabled.html.twig"		
+                facebook:
+                    type: twig
+                    label: client.ui.facebook
+                    sortable: ~
+                    options:
+                        template: "@ClientAdminBundle/Resources/views/Field/facebook.html.twig"
+                twitter:
+                    type: twig
+                    label: client.ui.twitter
+                    sortable: ~
+                    options:
+                        template: "@ClientAdminBundle/Resources/views/Field/twitter.html.twig"
             filters:
                 search:
                     type: string

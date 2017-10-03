@@ -1,0 +1,5 @@
+{% if data is not null %}
+    <a href="https://twitter.com/intent/user?user_id={{ data.identifier }}" target="_blank">Perfil</a>
+{% else %}
+    <span>-</span>
+{% endif %}

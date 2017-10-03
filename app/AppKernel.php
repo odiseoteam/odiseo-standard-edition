@@ -20,7 +20,7 @@ class AppKernel extends Kernel
 
             // Extra Bundles
             new \FOS\RestBundle\FOSRestBundle(),
-//            new \HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
+            new \HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
             new \Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new \Bazinga\Bundle\HateoasBundle\BazingaHateoasBundle(),
             new \Knp\Bundle\MenuBundle\KnpMenuBundle(),
@@ -30,7 +30,7 @@ class AppKernel extends Kernel
             new \Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
             new \Vich\UploaderBundle\VichUploaderBundle(),
             new \Liip\ImagineBundle\LiipImagineBundle(),
-            new \JMS\SerializerBundle\JMSSerializerBundle($this),
+            new \JMS\SerializerBundle\JMSSerializerBundle(),
             new \FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new \winzou\Bundle\StateMachineBundle\winzouStateMachineBundle(),
             new \Sylius\Bundle\ResourceBundle\SyliusResourceBundle(),

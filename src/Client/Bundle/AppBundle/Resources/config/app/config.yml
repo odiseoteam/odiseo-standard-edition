@@ -40,7 +40,7 @@ vich_uploader:
    storage:   gaufrette
    mappings:
         images:
-            uri_prefix:         /images
+            uri_prefix:         /media/images
             upload_destination: images_fs
             namer:              vich_uploader.namer_uniqid
             inject_on_load:     false
@@ -65,21 +65,19 @@ a2lix_translation_form:
     required_locales: [en, es]
     manager_registry: doctrine
 
-#hwi_oauth:
-#    firewall_names: [main]
-#    resource_owners:
-#        facebook:
-#            type: facebook
-#            client_id: '%odiseo.facebook.client_id%'
-#            client_secret: '%odiseo.facebook.client_secret%'
-#            scope: "public_profile,email"
-#            paths:
-#                email: email
-#            options:
-#                display: popup #dialog is optimized for popup window
-#        twitter:
-#            type:                twitter
-#            client_id:           '%odiseo.twitter.client_id%'
-#            client_secret:       '%odiseo.twitter.client_secret%'
-#            options:
-#                include_email: true
+hwi_oauth:
+    firewall_names: [main]
+    resource_owners:
+        facebook:
+            type: facebook
+            client_id: '%odiseo.facebook.client_id%'
+            client_secret: '%odiseo.facebook.client_secret%'
+            scope: "public_profile, email"
+            paths:
+                email: email
+        twitter:
+            type: twitter
+            client_id: '%odiseo.twitter.client_id%'
+            client_secret: '%odiseo.twitter.client_secret%'
+            options:
+                include_email: true
