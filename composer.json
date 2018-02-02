@@ -1,16 +1,14 @@
-  {
+{
     "name": "odiseoteam/odiseo-standard-edition",
     "license": "MIT",
     "type": "project",
-    "description": "The Odiseo's \"Symfony Standard Edition\" distribution",
+    "description": "Odiseo Standard Symfony Edition distribution",
+    "homepage": "https://odiseo.com.ar",
     "autoload": {
         "psr-4": {
             "": "src/"
         },
-        "classmap": [
-            "app/AppKernel.php",
-            "app/AppCache.php"
-        ]
+        "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
     "autoload-dev": {
         "psr-4": {
@@ -18,32 +16,32 @@
         }
     },
     "require": {
-        "php": ">=5.5.9",
-        "symfony/symfony": "^3.2",
+        "php": "^7.1",
+        "symfony/symfony": "^3.4",
         "doctrine/orm": "^2.5",
         "doctrine/doctrine-bundle": "^1.6",
-        "doctrine/doctrine-cache-bundle": "^1.2",
-        "symfony/swiftmailer-bundle": "^2.3",
-        "symfony/monolog-bundle": "^3.0",
+        "doctrine/doctrine-cache-bundle": "^1.3",
+        "doctrine/doctrine-fixtures-bundle" : "^2.3",
+        "symfony/swiftmailer-bundle": "^2.6",
+        "symfony/monolog-bundle": "^3.1.0",
         "symfony/polyfill-apcu": "^1.0",
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0",
         "gedmo/doctrine-extensions" : "~2.4",
-        "doctrine/doctrine-fixtures-bundle" : "~2.3",
+        "twig/twig": "^1.0||^2.0",
         "twig/extensions" : "~1.0",
 
-        "fzaninotto/faker" : "~1.6.0",
-        "knplabs/knp-gaufrette-bundle": "0.3.*",
-        "vich/uploader-bundle" : "^1.6",
-        "liip/imagine-bundle": "^1.6",
-        "knplabs/knp-menu-bundle" : "~2.0",
+        "fzaninotto/faker" : "^1.6",
+        "knplabs/knp-gaufrette-bundle": "^0.3",
+        "knplabs/knp-menu-bundle" : "~2.1",
+        "vich/uploader-bundle" : "~1.7",
+        "liip/imagine-bundle": "^1.9",
 	"hwi/oauth-bundle": "^0.5",
-        "friendsofsymfony/jsrouting-bundle": "^1.6",
+        "friendsofsymfony/jsrouting-bundle": "^2.1",
         "lunetics/locale-bundle": "2.5.*",
         "a2lix/translation-form-bundle": "^2.1",
-	"beberlei/DoctrineExtensions": "*",
-        "sylius/resource-bundle" : "^1.0@beta",
+        "sylius/resource-bundle" : "^1.0",
 
         "odiseoteam/odiseo-util-bundle" : "^1.0",
         "odiseoteam/odiseo-user-bundle" : "^1.0",
@@ -53,6 +51,7 @@
         "sensio/generator-bundle": "^3.0",
         "symfony/phpunit-bridge": "^3.0"
     },
+    "prefer-stable": true,
     "scripts": {
         "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
