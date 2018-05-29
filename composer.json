@@ -1,6 +1,9 @@
 {
+    "name": "odiseoteam/odiseo-standard-edition",
+    "license": "MIT",
     "type": "project",
-    "license": "proprietary",
+    "description": "Odiseo Standard Symfony Edition distribution",
+    "homepage": "https://odiseo.com.ar",
     "require": {
         "php": "^7.1.3",
         "ext-iconv": "*",
