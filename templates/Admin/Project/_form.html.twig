@@ -1,0 +1,13 @@
+{% form_theme form '@OdiseoAdmin/forms.html.twig' %}
+
+<div class="row">
+    <div class="col-md-12">
+        <fieldset>
+            {{ form_row(form.translations) }}
+            {{ form_row(form.link) }}
+            {{ form_row(form.enabled) }}
+        </fieldset>
+    </div>
+</div>
+
+{{ form_rest(form) }}

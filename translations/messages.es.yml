@@ -1,0 +1,10 @@
+app:
+    ui:
+        first_name: Nombre
+        last_name: Apellido
+        facebook: Facebook
+        twitter: Twitter
+sylius:
+    ui:
+        app_users: Usuarios
+        value: Valor

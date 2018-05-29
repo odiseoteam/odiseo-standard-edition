@@ -1,0 +1,17 @@
+admin_app_user:
+    resource: |
+        alias: sylius.app_user
+        section: admin
+        templates: OdiseoAdminBundle:Crud
+        except: ['show']
+        redirect: index
+        grid: app_user
+        permission: true
+        vars:
+            all:
+                subheader: "Administra los usuarios"
+                templates:
+                    form: :AppUser:_form.html.twig
+            index:
+                icon: user
+    type: sylius.resource

@@ -1,55 +1,22 @@
-# Bootstrap
-/var/bootstrap*
-
-# Symfony directories
-/build/
-/phpunit.xml
-/var/*
-!/var/cache
-/var/cache/*
-!var/cache/.gitkeep
-!/var/logs
-/var/logs/*
-!var/logs/.gitkeep
-!/var/sessions
-/var/sessions/*
-!var/sessions/.gitkeep
-!var/SymfonyRequirements.php
-/vendor/
-
-/web/bundles
-/web/uploads/*
-/web/media/*
-/web/assets
-/composer.lock
-/node_modules
-
-# Configuration files
-app/config/parameters.ini
-app/config/parameters.yml
-app/config/*.local.yml
-app/config/deploy.rb
-behat.yml
-
-
-# eclipse
-.externalToolBuilders
-.settings
-.buildpath
-.project
-
-#Others
 .idea
 .DS_Store
-bin/behat
-bin/doctrine*
-bin/phpspec
-bin/webunit
-bin/phpunit
-bin/phpcrodm
-bin/phpcrodm.php
-bin/jackalope
-bin/phpunit
 
-deploy/deploy.rb
-deploy/stages/*.rb
+/behat.yml
+/phpunit.xml
+/phpspec.yml
+
+###> symfony/webpack-encore-pack ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-pack ###
+
+###> symfony/framework-bundle ###
+/.env
+/public/bundles/
+/public/assets/
+/public/media/
+/var/
+/vendor/
+###< symfony/framework-bundle ###

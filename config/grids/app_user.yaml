@@ -1,0 +1,63 @@
+sylius_grid:
+    grids:
+        app_user:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: App\Entity\AppUser
+            sorting:
+                lastLogin: desc
+            fields:
+                firstName:
+                    type: string
+                    label: client.ui.first_name
+                    sortable: ~
+                lastName:
+                    type: string
+                    label: client.ui.last_name
+                email:
+                    type: string
+                    label: odiseo.ui.email
+                    sortable: ~
+                lastLogin:
+                    type: datetime
+                    label: odiseo.ui.last_login
+                    sortable: ~
+                    options:
+                        format: d-m-Y H:i
+                enabled:
+                    type: twig
+                    label: odiseo.ui.enabled
+                    sortable: ~
+                    options:
+                        template: "@OdiseoAdmin/Grid/Field/enabled.html.twig"		
+                facebook:
+                    type: twig
+                    label: client.ui.facebook
+                    sortable: ~
+                    options:
+                        template: "Admin/Field/facebook.html.twig"
+                twitter:
+                    type: twig
+                    label: client.ui.twitter
+                    sortable: ~
+                    options:
+                        template: "Admin/Field/twitter.html.twig"
+            filters:
+                search:
+                    type: string
+                    label: odiseo.ui.search
+                    options:
+                        fields: [email, username]
+                enabled:
+                    type: boolean
+                    label: odiseo.ui.enabled
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete

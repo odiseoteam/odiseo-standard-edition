@@ -1,0 +1,7 @@
+app_connect_facebook:
+    path:  /connect/facebook
+    defaults: { _controller: App\Controller\FacebookController::connect }
+
+app_connect_facebook_check:
+    path:  /connect/facebook/check
+    defaults: { _controller: App\Controller\FacebookController::connectCheck }

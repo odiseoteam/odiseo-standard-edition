@@ -1,3 +1,0 @@
-imports:
-    - { resource: "@OdiseoAdminBundle/Resources/config/app/config.yml" }
-    - { resource: "@ClientAdminBundle/Resources/config/grids/main.yml" }

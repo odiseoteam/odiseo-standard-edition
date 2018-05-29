@@ -1,0 +1,11 @@
+odiseo_admin:
+    prefix: /
+    resource: "@OdiseoAdminBundle/Resources/config/routing/main.yml"
+
+admin_app_user:
+    prefix: /
+    resource: "admin/app_user.yaml"
+
+admin_dashboard:
+    path: /dashboard
+    defaults: { _controller: App\Controller\AdminController::dashboard }

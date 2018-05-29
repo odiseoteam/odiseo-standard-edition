@@ -1,3 +1,0 @@
-Client\Bundle\AppBundle\Entity\AppUserOAuth:
-    type: entity
-    table: client_app_user_oauth

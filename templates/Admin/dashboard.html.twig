@@ -1,0 +1,23 @@
+{% extends '@OdiseoAdmin/layout.html.twig' %}
+
+{% block content_title %}
+<h1>Dashboard <small>Bienvenido</small></h1>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="small-box bg-aqua">
+                <div class="inner">
+                    <h3>{{ statistics.users.totals }}</h3>
+
+                    <p>Total de usuarios</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-user"></i>
+                </div>
+                <a href="{{ path('sylius_admin_app_user_index') }}" class="small-box-footer">Ver todos <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

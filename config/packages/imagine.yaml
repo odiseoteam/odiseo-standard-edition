@@ -1,0 +1,13 @@
+liip_imagine:
+    loaders:
+        upload_images:
+            filesystem:
+                data_root: '%kernel.root_dir%/../public/media/images'
+    filter_sets:
+        cache: ~
+        square:
+            data_loader: upload_images
+            quality: 80
+            filters:
+                thumbnail: { size: [600, 600], mode: inset }
+                background: { size: [600, 600], position: center, color: '#F1F1F1' }

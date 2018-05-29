@@ -1,0 +1,6 @@
+twig:
+    paths: ['%kernel.project_dir%/templates']
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+    globals:
+        facebook_client_id: '%env(resolve:FACEBOOK_CLIENT_ID)%'

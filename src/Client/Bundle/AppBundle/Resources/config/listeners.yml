@@ -1,9 +1,0 @@
-parameters:
-services:
-    sylius.listener.user_registration:
-        class: Client\Bundle\AppBundle\EventListener\UserRegistrationListener
-        tags:
-            - { name: kernel.event_listener, event: sylius.app_user.post_register, method: handleUserVerification }
-        arguments:
-            - '@sylius.security.user_login'
-            - 'main'

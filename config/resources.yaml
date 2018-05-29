@@ -1,0 +1,13 @@
+sylius_user:
+    driver: doctrine/orm
+    resources:
+        app:
+            user:
+                classes:
+                    model: App\Entity\AppUser
+                    repository: App\Repository\AppUserRepository
+        oauth:
+            user:
+                classes:
+                    model: App\Entity\AppUserOAuth
+                    interface: Sylius\Component\User\Model\UserOAuthInterface

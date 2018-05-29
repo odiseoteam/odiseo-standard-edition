@@ -1,0 +1,30 @@
+app_register:
+    path: /register
+    methods: [GET, POST]
+    defaults:
+        _controller: sylius.controller.app_user:createAction
+        _sylius:
+            template: "Register/register.html.twig"
+            form: App\Form\Type\AppUserRegistrationType
+            event: register
+            redirect:
+                route: app_index
+
+app_login:
+    path: /login
+    methods: [GET]
+    defaults:
+        _controller: sylius.controller.user_security:loginAction
+        _sylius:
+            template: "Security/login.html.twig"
+            permission: true
+
+app_login_check:
+    path: /login-check
+    methods: [POST]
+    defaults:
+        _controller: sylius.controller.user_security:checkAction
+
+app_logout:
+    path: /logout
+    methods: [GET]

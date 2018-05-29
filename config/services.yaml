@@ -1,0 +1,87 @@
+imports:
+    - { resource: "@OdiseoAdminBundle/Resources/config/app/config.yml" }
+    - { resource: "forms.yaml" }
+    - { resource: "listeners.yaml" }
+    - { resource: "resources.yaml" }
+    - { resource: "grids/main.yaml" }
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locale: 'en'
+    mailer_user: 'maileruser'
+    odiseo_admin.homepage_route: admin_dashboard
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        public: false       # Allows optimizing the container by removing unused services; this also means
+                            # fetching services directly from the container via $container->get() won't work.
+                            # The best practice is to be explicit about your dependencies anyway.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/*'
+        exclude: '../src/{Entity,Form,Migrations,Tests}'
+
+    # controllers are imported separately to make sure services can be injected
+    # as action arguments even if you don't extend any base controller class
+    App\Controller\:
+        resource: '../src/Controller'
+        tags: ['controller.service_arguments']
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
+    app.security.facebook_authenticator:
+        class: App\Security\FacebookAuthenticator
+        arguments:
+            - '@oauth2.registry'
+            - '@router'
+            - "@sylius.factory.app_user"
+            - "@sylius.repository.app_user"
+            - "@sylius.factory.oauth_user"
+            - "@sylius.repository.oauth_user"
+            - "@sylius.manager.app_user"
+
+knp_gaufrette:
+    stream_wrapper: ~
+    adapters:
+        image_adapter:
+            local:
+                directory: '%kernel.root_dir%/../public/media/images'
+                create:    true
+    filesystems:
+        images_fs:
+            adapter: image_adapter
+
+lunetics_locale:
+    guessing_order:
+        - query
+        - router
+        - session
+        - cookie
+        - browser
+    allowed_locales:
+        - en
+        - es
+    cookie:
+        set_on_change: true
+
+knpu_oauth2_client:
+    clients:
+        # the key "facebook_main" can be anything, it
+        # will create a service: "knpu.oauth2.client.facebook_main"
+        facebook_main:
+            # this will be one of the supported types
+            type: facebook
+            client_id: '%env(resolve:FACEBOOK_CLIENT_ID)%'
+            client_secret: '%env(resolve:FACEBOOK_CLIENT_SECRET)%'
+            # the route that you're redirected to after
+            # see the controller example below
+            redirect_route: app_connect_facebook_check
+            # route parameters to pass to your route, if needed
+            redirect_params: {}
+            graph_api_version: v2.8

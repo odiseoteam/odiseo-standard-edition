@@ -1,0 +1,10 @@
+App\Entity\AppUser:
+    type: entity
+    table: app_user
+    fields:
+        firstName:
+            type: string
+            nullable: true
+        lastName:
+            type: string
+            nullable: true

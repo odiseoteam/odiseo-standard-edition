@@ -1,25 +1,27 @@
 Odiseo Standard Edition
 ========================
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
+Welcome to the Symfony Standard Edition - a fully-functional Symfony4
 application that you can use as the skeleton for your new applications.
 
 Installation
 ------------
 
 ```bash
-sudo php composer.phar create-project odiseoteam/odiseo-standard-edition [path_to_project]
-cd [path_to_project]
-sudo php composer.phar update
-sudo php bin/console doctrine:database:create
-sudo php bin/console doctrine:schema:update --force
-sudo php bin/console doctrine:fixtures:load
-sudo rm -rf var/cache var/logs && sudo mkdir var/cache var/logs && sudo chmod -R 777 var/cache var/logs
-sudo npm install
-sudo gulp
-sudo php bin/console server:start
+$ composer create-project odiseoteam/odiseo-standard-edition [path_to_project]
+$ cd [path_to_project]
+$ composer update
+$ yarn install
+$ yarn run gulp
+$ php bin/console doctrine:database:create
+$ php bin/console doctrine:schema:update --force
+$ php bin/console doctrine:fixtures:load
+$ rm -rf var/cache var/logs && mkdir var/cache var/logs && chmod -R 777 var/cache var/logs
 ```
-Open: http://localhost:8000/
 
-TODO List
----------------
+GET FUN!!!
+
+Authors
+-------
+
+Project by [Odiseo Team](https://odiseo.com.ar).

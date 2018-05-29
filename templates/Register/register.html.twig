@@ -1,0 +1,32 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <a href="{{ path('app_connect_facebook') }}" class="btn facebook">Facebook</a>
+    </div>
+    <div class="col-md-12">
+        <h2>Register</h2>
+        <form action="{{ path('app_register') }}" method="post">
+            {{ form_widget(form._token) }}
+
+            {{ form_errors(form.username) }}
+            {{ form_widget(form.username) }}
+
+            {{ form_errors(form.firstName) }}
+            {{ form_widget(form.firstName) }}
+
+            {{ form_errors(form.lastName) }}
+            {{ form_widget(form.lastName) }}
+
+            {{ form_errors(form.email) }}
+            {{ form_widget(form.email) }}
+
+            {{ form_errors(form.plainPassword) }}
+            {{ form_widget(form.plainPassword) }}
+
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
