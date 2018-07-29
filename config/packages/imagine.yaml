@@ -1,5 +1,7 @@
 liip_imagine:
     loaders:
+        default:
+            filesystem: ~
         upload_images:
             filesystem:
                 data_root: '%kernel.root_dir%/../public/media/images'

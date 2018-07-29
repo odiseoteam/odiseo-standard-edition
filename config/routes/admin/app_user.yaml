@@ -11,7 +11,7 @@ admin_app_user:
             all:
                 subheader: "Administra los usuarios"
                 templates:
-                    form: :AppUser:_form.html.twig
+                    form: Admin/AppUser/_form.html.twig
             index:
                 icon: user
     type: sylius.resource

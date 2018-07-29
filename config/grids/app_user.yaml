@@ -10,11 +10,11 @@ sylius_grid:
             fields:
                 firstName:
                     type: string
-                    label: client.ui.first_name
+                    label: app.ui.first_name
                     sortable: ~
                 lastName:
                     type: string
-                    label: client.ui.last_name
+                    label: app.ui.last_name
                 email:
                     type: string
                     label: odiseo.ui.email
@@ -33,16 +33,16 @@ sylius_grid:
                         template: "@OdiseoAdmin/Grid/Field/enabled.html.twig"		
                 facebook:
                     type: twig
-                    label: client.ui.facebook
+                    label: app.ui.facebook
                     sortable: ~
                     options:
-                        template: "Admin/Field/facebook.html.twig"
+                        template: "@OdiseoAdmin/Grid/Field/facebook.html.twig"
                 twitter:
                     type: twig
-                    label: client.ui.twitter
+                    label: app.ui.twitter
                     sortable: ~
                     options:
-                        template: "Admin/Field/twitter.html.twig"
+                        template: "@OdiseoAdmin/Grid/Field/twitter.html.twig"
             filters:
                 search:
                     type: string

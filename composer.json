@@ -18,7 +18,7 @@
         "odiseoteam/odiseo-admin-bundle": "^2.0",
         "odiseoteam/odiseo-user-bundle": "^2.0",
         "odiseoteam/odiseo-util-bundle": "^1.0",
-        "sylius/resource-bundle": "^1.2@dev",
+        "sylius/resource-bundle": "^1.2",
         "symfony/apache-pack": "^1.0",
         "symfony/asset": "^4.0",
         "symfony/console": "^4.0",

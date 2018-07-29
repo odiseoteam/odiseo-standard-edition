@@ -5,6 +5,7 @@ sylius_user:
             user:
                 classes:
                     model: App\Entity\AppUser
+                    form: App\Form\Type\AppUserRegistrationType
                     repository: App\Repository\AppUserRepository
         oauth:
             user:

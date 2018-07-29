@@ -14,6 +14,6 @@ class MainController extends Controller
 {
     public function index()
     {
-        return $this->render('Main/index.html.twig', array());
+        return $this->render('Main/index.html.twig', []);
     }
 }

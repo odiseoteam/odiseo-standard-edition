@@ -8,3 +8,4 @@ sylius:
     ui:
         app_users: Usuarios
         value: Value
+        edit_app_user: Edit user
