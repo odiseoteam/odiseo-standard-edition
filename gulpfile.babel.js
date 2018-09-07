@@ -33,13 +33,13 @@ const app_config = [
 ];
 
 export const buildOdiseoAdmin = function buildOdiseoAdmin() {
-    gulp.src('vendor/odiseoteam/odiseo-admin-bundle/gulpfile.babel.js', { read: false })
+    return gulp.src('vendor/odiseoteam/odiseo-admin-bundle/gulpfile.babel.js', { read: false })
         .pipe(chug({ args: vendor_config }));
 };
 buildOdiseoAdmin.description = 'Build odiseo admin assets.';
 
 export const watchOdiseoAdmin = function watchOdiseoAdmin() {
-    gulp.src('vendor/odiseoteam/odiseo-admin-bundle/gulpfile.babel.js', { read: false })
+    return gulp.src('vendor/odiseoteam/odiseo-admin-bundle/gulpfile.babel.js', { read: false })
         .pipe(chug({ args: vendor_config }));
 };
 watchOdiseoAdmin.description = 'Watch odiseo admin assets.';

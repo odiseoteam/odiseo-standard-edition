@@ -1,14 +1,11 @@
 liip_imagine:
-    loaders:
+    resolvers:
         default:
-            filesystem: ~
-        upload_images:
-            filesystem:
-                data_root: '%kernel.root_dir%/../public/media/images'
+            web_path:
+                web_root: "%kernel.project_dir%/public"
+                cache_prefix: "media/cache"
     filter_sets:
-        cache: ~
         square:
-            data_loader: upload_images
             quality: 80
             filters:
                 thumbnail: { size: [600, 600], mode: inset }

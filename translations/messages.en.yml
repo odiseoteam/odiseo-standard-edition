@@ -1,5 +1,12 @@
 app:
     ui:
+        displaying: Displaying
+        of: of
+        results: Results
+        list: List
+        dashboard: Dashboard
+        welcome: Welcome
+        home: Home
         first_name: First Name
         last_name: Last Name
         facebook: Facebook
@@ -9,3 +16,5 @@ sylius:
         app_users: Usuarios
         value: Value
         edit_app_user: Edit user
+        from: From
+        to: To

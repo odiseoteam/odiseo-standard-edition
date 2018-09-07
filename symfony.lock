@@ -188,9 +188,6 @@
     "pagerfanta/pagerfanta": {
         "version": "v1.1.0"
     },
-    "paragonie/random_compat": {
-        "version": "v2.0.12"
-    },
     "phpcollection/phpcollection": {
         "version": "0.5.0"
     },
@@ -364,9 +361,6 @@
     },
     "symfony/orm-pack": {
         "version": "v1.0.5"
-    },
-    "symfony/polyfill-ctype": {
-        "version": "v1.8.0"
     },
     "symfony/polyfill-intl-icu": {
         "version": "v1.8.0"
