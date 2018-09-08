@@ -3,6 +3,7 @@
 namespace App\Form\Type;
 
 use Sylius\Bundle\UserBundle\Form\Type\UserType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
@@ -13,6 +14,8 @@ class AppUserRegistrationType extends UserType
         parent::buildForm($builder, $options);
 
         $builder
+            ->remove('username')
+            ->remove('enabled')
             ->add('firstName', TextType::class, [
                 'label' => 'Nombre',
                 'attr' => [
@@ -24,6 +27,12 @@ class AppUserRegistrationType extends UserType
                 'attr' => [
                     'placeholder' => 'Apellido'
                 ]
+            ])
+            ->add('email', EmailType::class, [
+                'label' => 'Email',
+                'attr' => array(
+                    'placeholder' => 'Email'
+                )
             ])
         ;
     }

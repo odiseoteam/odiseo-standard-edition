@@ -7,11 +7,7 @@
     </div>
     <div class="col-md-12">
         <h2>Register</h2>
-        <form action="{{ path('app_register') }}" method="post">
-            {{ form_widget(form._token) }}
-
-            {{ form_errors(form.username) }}
-            {{ form_widget(form.username) }}
+        {{ form_start(form, {'action': path('app_register'), 'method': 'post'}) }}
 
             {{ form_errors(form.firstName) }}
             {{ form_widget(form.firstName) }}
@@ -26,7 +22,7 @@
             {{ form_widget(form.plainPassword) }}
 
             <button type="submit" class="btn">Register</button>
-        </form>
+        {{ form_end(form) }}
     </div>
 </div>
 {% endblock %}

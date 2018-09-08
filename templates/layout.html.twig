@@ -33,8 +33,10 @@
 
     {{ include('_header.html.twig') }}
 
-    {% block content %}
-    {% endblock %}
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
 
     {{ include('_footer.html.twig') }}
 

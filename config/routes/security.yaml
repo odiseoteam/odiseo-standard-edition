@@ -10,6 +10,22 @@ app_register:
             redirect:
                 route: app_index
 
+app_profile_update:
+    path: /profile/update
+    methods: [GET, POST]
+    defaults:
+        _controller: sylius.controller.app_user:updateAction
+        _sylius:
+            template: "Register/register.html.twig"
+            form: App\Form\Type\AppUserRegistrationType
+            repository:
+                method: find
+                arguments:
+                    - "expr:service('security.token_storage').getToken().getUser()"
+            event: register
+            redirect:
+                route: app_index
+
 app_login:
     path: /login
     methods: [GET]

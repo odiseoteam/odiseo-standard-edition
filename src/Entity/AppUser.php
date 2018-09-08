@@ -10,46 +10,46 @@ use Sylius\Component\Resource\Model\ResourceInterface;
  */
 class AppUser extends User implements ResourceInterface
 {
-    /** @var string */
+    /** @var string|null */
     protected $firstName;
 
-    /** @var string */
+    /** @var string|null */
     protected $lastName;
 
     /**
-     * @inheritdoc
+     * @return string|null
      */
-    public function getFirstName()
+    public function getFirstName(): ?string
     {
         return $this->firstName;
     }
 
     /**
-     * @inheritdoc
+     * @param string|null $firstName
      */
-    public function setFirstName($firstName)
+    public function setFirstName(?string $firstName)
     {
         $this->firstName = $firstName;
     }
 
     /**
-     * @inheritdoc
+     * @return string|null
      */
-    public function getLastName()
+    public function getLastName(): ?string
     {
         return $this->lastName;
     }
 
     /**
-     * @inheritdoc
+     * @param string|null $lastName
      */
-    public function setLastName($lastName)
+    public function setLastName(?string $lastName): void
     {
         $this->lastName = $lastName;
     }
 
     /**
-     * @inheritdoc
+     * @return AppUserOAuth|UserOAuthInterface|null
      */
     public function getFacebook()
     {
@@ -57,9 +57,9 @@ class AppUser extends User implements ResourceInterface
     }
 
     /**
-     * @inheritdoc
+     * @return AppUserOAuth|UserOAuthInterface|null
      */
-    public function getTwitter()
+    public function getTwitter(): AppUserOAuth
     {
         return $this->getOAuthAccount('twitter');
     }

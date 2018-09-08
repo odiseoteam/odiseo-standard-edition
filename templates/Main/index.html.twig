@@ -4,7 +4,7 @@
 <h1>Welcome to Odiseo Standard Edition</h1>
 
 {% if app.user %}
-<p>Welcome {{ app.user.username }}! <a href="{{ path('app_logout') }}">Logout</a></p>
+<p>Welcome {{ app.user.email }}! <a href="{{ path('app_logout') }}">Logout</a></p>
 {% else %}
 <p>Not signed in <a href="{{ path('app_login') }}">Login</a></p>
 {% endif %}
