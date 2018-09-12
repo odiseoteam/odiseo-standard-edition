@@ -1,11 +1,12 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-<h1>Welcome to Odiseo Standard Edition</h1>
-
-{% if app.user %}
-<p>Welcome {{ app.user.email }}! <a href="{{ path('app_logout') }}">Logout</a></p>
-{% else %}
-<p>Not signed in <a href="{{ path('app_login') }}">Login</a></p>
-{% endif %}
+<section class="homepage">
+    {% if app.user %}
+        <h1 class="h3 mb-3 font-weight-normal">Welcome {{ app.user.email }}!</h1>
+        <a href="{{ path('app_logout') }}" class="btn btn-default">Logout</a>
+    {% else %}
+        <h1 class="h3 mb-3 font-weight-normal">Not signed in</h1>
+        <a href="{{ path('app_login') }}" class="btn btn-default">Login</a>
+    {% endif %}
 {% endblock %}

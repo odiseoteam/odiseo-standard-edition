@@ -1,28 +1,43 @@
 {% extends 'layout.html.twig' %}
 
-{% block content %}
-<div class="row">
-    <div class="col-md-12">
-        <a href="{{ path('app_connect_facebook') }}" class="btn facebook">Facebook</a>
-    </div>
-    <div class="col-md-12">
-        <h2>Register</h2>
-        {{ form_start(form, {'action': path('app_register'), 'method': 'post'}) }}
+{% form_theme form 'bootstrap_4_horizontal_layout.html.twig' %}
 
+{% block content %}
+<section class="register">
+    <h1 class="h3 mb-3 font-weight-normal">Registro</h1>
+
+    <p>Ingresá con tu cuenta de facebook, es más rápido.</p>
+
+    <a href="{{ path('app_connect_facebook') }}" class="btn btn-lg btn-info btn-block facebook"><i class="fa fa-facebook-square"></i> Facebook</a>
+    <br>
+
+    <h2 class="h3 mb-3 font-weight-normal">Datos personales</h2>
+
+    {{ form_start(form, {'action': form.plainPassword is defined?path('app_register'):path('app_profile_update'), 'method': 'post'}) }}
+        {{ form_row(form._token) }}
+        <div class="form-group">
             {{ form_errors(form.firstName) }}
             {{ form_widget(form.firstName) }}
+        </div>
 
+        <div class="form-group">
             {{ form_errors(form.lastName) }}
             {{ form_widget(form.lastName) }}
+        </div>
 
+        <div class="form-group">
             {{ form_errors(form.email) }}
             {{ form_widget(form.email) }}
+        </div>
 
+        {% if form.plainPassword is defined %}
+        <div class="form-group">
             {{ form_errors(form.plainPassword) }}
             {{ form_widget(form.plainPassword) }}
+        </div>
+        {% endif %}
 
-            <button type="submit" class="btn">Register</button>
-        {{ form_end(form) }}
-    </div>
-</div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Registrarme</button>
+    {{ form_end(form, {'render_rest': false}) }}
+</section>
 {% endblock %}

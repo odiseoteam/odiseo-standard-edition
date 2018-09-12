@@ -1,0 +1,11 @@
+{% import '@OdiseoAdmin/Macro/breadcrumb.html.twig' as breadcrumb %}
+
+{% set breadcrumbs = [
+    { label: 'odiseo.ui.dashboard'|trans, url: path('odiseo_admin_index'), icon: 'dashboard' },
+    { label: (metadata.applicationName~'.ui.'~metadata.pluralName)|trans, url: path('sylius_admin_app_user_index', configuration.vars.route.parameters|default({})) },
+    { label: resource.code|default(resource.id)},
+    { label: 'sylius.ui.show'|trans }
+]
+%}
+
+{{ breadcrumb.crumble(breadcrumbs) }}

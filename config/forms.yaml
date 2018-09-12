@@ -1,6 +1,12 @@
 services:
     app.form.type.app_user:
+        class: App\Form\Type\AppUserType
+        arguments: ['%sylius.model.app_user.class%', ['odiseo']]
+        tags:
+            - { name: form.type, alias: app_user }
+
+    app.form.type.app_user_registration:
         class: App\Form\Type\AppUserRegistrationType
         arguments: ['%sylius.model.app_user.class%', ['app_user_registration']]
         tags:
-            - { name: form.type, alias: app_registration }
+            - { name: form.type, alias: app_user_registration }

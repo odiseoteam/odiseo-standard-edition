@@ -2366,16 +2366,16 @@
         },
         {
             "name": "knpuniversity/oauth2-client-bundle",
-            "version": "v1.21.0",
+            "version": "v1.22.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/knpuniversity/oauth2-client-bundle.git",
-                "reference": "41990df63e9d663b4c1bf7918cc9dcfa5475e068"
+                "reference": "a7faba0303b55ec2a3b7387d434704e866162aa7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/knpuniversity/oauth2-client-bundle/zipball/41990df63e9d663b4c1bf7918cc9dcfa5475e068",
-                "reference": "41990df63e9d663b4c1bf7918cc9dcfa5475e068",
+                "url": "https://api.github.com/repos/knpuniversity/oauth2-client-bundle/zipball/a7faba0303b55ec2a3b7387d434704e866162aa7",
+                "reference": "a7faba0303b55ec2a3b7387d434704e866162aa7",
                 "shasum": ""
             },
             "require": {
@@ -2388,7 +2388,7 @@
             },
             "require-dev": {
                 "league/oauth2-facebook": "^1.1|^2.0",
-                "phpunit/phpunit": "^4.8",
+                "phpunit/phpunit": "^4.8.36",
                 "symfony/security-guard": "^2.8|^3.0"
             },
             "suggest": {
@@ -2416,7 +2416,7 @@
                 "oauth",
                 "oauth2"
             ],
-            "time": "2018-08-24T20:49:40+00:00"
+            "time": "2018-09-10T16:37:37+00:00"
         },
         {
             "name": "league/oauth2-client",
@@ -2905,24 +2905,24 @@
         },
         {
             "name": "odiseoteam/odiseo-admin-bundle",
-            "version": "v2.1.2",
+            "version": "v2.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/odiseoteam/OdiseoAdminBundle.git",
-                "reference": "32e0ee1d0c4185b3ac00127ece33eb0990b78270"
+                "reference": "c4bc35aab853be8bb1b73e0484a78c08320d1f26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/odiseoteam/OdiseoAdminBundle/zipball/32e0ee1d0c4185b3ac00127ece33eb0990b78270",
-                "reference": "32e0ee1d0c4185b3ac00127ece33eb0990b78270",
+                "url": "https://api.github.com/repos/odiseoteam/OdiseoAdminBundle/zipball/c4bc35aab853be8bb1b73e0484a78c08320d1f26",
+                "reference": "c4bc35aab853be8bb1b73e0484a78c08320d1f26",
                 "shasum": ""
             },
             "require": {
                 "ext-iconv": "*",
                 "php": "^7.1.3",
-                "sylius/grid-bundle": "^1.2@dev",
-                "sylius/resource-bundle": "^1.2@dev",
-                "sylius/user-bundle": "^1.2@dev",
+                "sylius/grid-bundle": "^1.2",
+                "sylius/resource-bundle": "^1.2",
+                "sylius/user-bundle": "^1.2",
                 "white-october/pagerfanta-bundle": "^1.0"
             },
             "type": "symfony-bundle",
@@ -2948,7 +2948,7 @@
                 "cms",
                 "symfony"
             ],
-            "time": "2018-08-28T05:45:26+00:00"
+            "time": "2018-09-12T05:22:10+00:00"
         },
         {
             "name": "odiseoteam/odiseo-user-bundle",
@@ -3510,16 +3510,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v6.1.2",
+            "version": "v6.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "7d760881d266d63c5e7a1155cbcf2ac656a31ca8"
+                "reference": "8ddcb66ac10c392d3beb54829eef8ac1438595f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/7d760881d266d63c5e7a1155cbcf2ac656a31ca8",
-                "reference": "7d760881d266d63c5e7a1155cbcf2ac656a31ca8",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/8ddcb66ac10c392d3beb54829eef8ac1438595f4",
+                "reference": "8ddcb66ac10c392d3beb54829eef8ac1438595f4",
                 "shasum": ""
             },
             "require": {
@@ -3565,7 +3565,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2018-07-13T07:04:35+00:00"
+            "time": "2018-09-11T07:12:52+00:00"
         },
         {
             "name": "sylius/grid",

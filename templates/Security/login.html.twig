@@ -1,25 +1,34 @@
 {% extends 'layout.html.twig' %}
 
+{% form_theme form 'bootstrap_4_horizontal_layout.html.twig' %}
+
 {% block content %}
-<div class="row">
-    <div class="col-md-12">
-        <a href="{{ path('app_connect_facebook') }}" class="btn facebook">Facebook</a>
-    </div>
-    <div class="col-md-12">
-        <h2>LOGIN</h2>
-        {% if error %}
-            <div class="alert alert-danger">
-                {{ error.messageKey|trans(error.messageData, 'security') }}
-            </div>
-        {% endif %}
-        <form class="" action="{{ path('app_login_check') }}" method="post">
-            <div>
-                <input type="email" name="_username" placeholder="Email">
-                <input type="password" name="_password" placeholder="Contraseña">
-            </div>
-            <button type="submit" class="btn">ENTRAR</button>
-        </form>
-        <p>If you not have an account, please <a href="{{ path('app_register') }}">Register</a></p>
-    </div>
-</div>
+<section class="login">
+    <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+
+    <a href="{{ path('app_connect_facebook') }}" class="btn btn-lg btn-info btn-block facebook"><i class="fa fa-facebook-square"></i> Facebook</a>
+    <br>
+
+    {% if error %}
+        <div class="alert alert-danger">
+            {{ error.messageKey|trans(error.messageData, 'security') }}
+        </div>
+    {% endif %}
+
+    <form action="{{ path('app_login_check') }}" method="post">
+        {{ form_errors(form) }}
+        <div class="form-group">
+            <input type="email" class="form-control" name="_username" placeholder="Dirección de email">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" name="_password" placeholder="Contraseña">
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Signin</button>
+    </form>
+
+    <hr>
+
+    <p>If you not have an account, please <a href="{{ path('app_register') }}">Register</a></p>
+</section>
 {% endblock %}

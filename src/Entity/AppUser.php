@@ -4,10 +4,8 @@ namespace App\Entity;
 
 use Odiseo\Bundle\UserBundle\Security\User;
 use Sylius\Component\Resource\Model\ResourceInterface;
+use Sylius\Component\User\Model\UserOAuthInterface;
 
-/**
- * AppUser
- */
 class AppUser extends User implements ResourceInterface
 {
     /** @var string|null */
@@ -15,6 +13,15 @@ class AppUser extends User implements ResourceInterface
 
     /** @var string|null */
     protected $lastName;
+    
+    /**
+     * @inheritdoc
+     */
+    public function setEmail(?string $email): void
+    {
+        parent::setEmail($email);
+        $this->setUsername($email);
+    }
 
     /**
      * @return string|null
@@ -49,9 +56,17 @@ class AppUser extends User implements ResourceInterface
     }
 
     /**
+     * @return string
+     */
+    public function getFullname()
+    {
+        return $this->firstName . ' ' . $this->lastName;
+    }
+
+    /**
      * @return AppUserOAuth|UserOAuthInterface|null
      */
-    public function getFacebook()
+    public function getFacebook(): ?AppUserOAuth
     {
         return $this->getOAuthAccount('facebook');
     }
@@ -59,7 +74,7 @@ class AppUser extends User implements ResourceInterface
     /**
      * @return AppUserOAuth|UserOAuthInterface|null
      */
-    public function getTwitter(): AppUserOAuth
+    public function getTwitter(): ?AppUserOAuth
     {
         return $this->getOAuthAccount('twitter');
     }

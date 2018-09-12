@@ -15,3 +15,13 @@ admin_app_user:
             index:
                 icon: user
     type: sylius.resource
+
+sylius_admin_app_user_show:
+    path: /app-users/{id}
+    methods: [GET]
+    defaults:
+        _controller: sylius.controller.app_user:showAction
+        _sylius:
+            section: admin
+            permission: true
+            template: Admin/AppUser/show.html.twig

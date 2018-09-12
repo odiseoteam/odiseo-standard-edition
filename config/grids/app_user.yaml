@@ -48,7 +48,7 @@ sylius_grid:
                     type: string
                     label: odiseo.ui.search
                     options:
-                        fields: [email, username]
+                        fields: [email, firstName, lastName]
                 enabled:
                     type: boolean
                     label: odiseo.ui.enabled
@@ -57,6 +57,8 @@ sylius_grid:
                     create:
                         type: create
                 item:
+                    show:
+                        type: show
                     update:
                         type: update
                     delete:

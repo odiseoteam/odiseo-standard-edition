@@ -16,5 +16,6 @@ sylius:
         app_users: Usuarios
         value: Value
         edit_app_user: Edit user
+        new_app_user: New user
         from: From
         to: To

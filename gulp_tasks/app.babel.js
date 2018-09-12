@@ -45,7 +45,7 @@ const paths = {
       upath.joinSafe(sourcePath, 'css/main.css'),
     ],
     img: [
-      upath.joinSafe(sourcePath, 'img/**'),
+      upath.joinSafe(sourcePath, 'images/**'),
     ],
     fonts: [
       upath.joinSafe(nodeModulesPath, 'bootstrap/dist/fonts/**'),
