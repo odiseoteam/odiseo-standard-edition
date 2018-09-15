@@ -66,7 +66,7 @@ class AppUser extends User implements ResourceInterface
     /**
      * @return AppUserOAuth|UserOAuthInterface|null
      */
-    public function getFacebook(): ?AppUserOAuth
+    public function getFacebook(): ?UserOAuthInterface
     {
         return $this->getOAuthAccount('facebook');
     }
@@ -74,7 +74,7 @@ class AppUser extends User implements ResourceInterface
     /**
      * @return AppUserOAuth|UserOAuthInterface|null
      */
-    public function getTwitter(): ?AppUserOAuth
+    public function getTwitter(): ?UserOAuthInterface
     {
         return $this->getOAuthAccount('twitter');
     }

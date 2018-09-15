@@ -21,7 +21,7 @@ class AddPasswordSubscriber implements EventSubscriberInterface
         $user = $event->getData();
         $form = $event->getForm();
 
-        if (!$user || null === $user->getId()) {
+        if (null == $user || null === $user->getId()) {
             $form->add('plainPassword', PasswordType::class, [
                 'label' => 'Contraseña',
                 'attr' => [

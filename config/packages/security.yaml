@@ -42,9 +42,10 @@ security:
                 check_path: app_login_check
                 failure_path: app_login
                 default_target_path: app_index
-#            guard:
-#                authenticators:
-#                    - "client.security.facebook_authenticator"
+            provider: app_provider
+            guard:
+                authenticators:
+                    - "app.security.facebook_authenticator"
             logout:       true
             anonymous:    true
 

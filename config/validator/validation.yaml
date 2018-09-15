@@ -2,7 +2,8 @@ App\Entity\AppUser:
     constraints:
         - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
             fields: [email]
-            groups: ['odiseo']
+            groups: ['app_user_registration']
+
     properties:
         email:
             - NotBlank:

@@ -27,7 +27,27 @@ $ php bin/console cache:clear
 
 GET FUN!!!
 
+Tests
+-------
+
+This Symfony4 skeleton project comes with a ready to use testing tools like phpstan and behat.
+
+#### Phpstan
+
+```bash
+$ vendor/bin/phpstan.phar analyse -c phpstan.neon -l max src/
+```
+
+#### Behat
+
+Rename behat.yml.dist to behat.yml and change the content according to your project.
+Next add your Scenarios on features folder and run:
+
+```bash
+$ vendor/bin/behat
+```
+
 Authors
 -------
 
-Project by [Odiseo Team](https://odiseo.com.ar).
+This project is maintained by <a href="https://odiseo.com.ar">Odiseo</a>. Want us to help you with this or any Symfony project? Contact us on <a href="mailto:team@odiseo.com.ar">team@odiseo.com.ar</a>.

@@ -20,6 +20,15 @@
     "behat/mink-selenium2-driver": {
         "version": "v1.3.1"
     },
+    "behat/symfony2-extension": {
+        "version": "2.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.1",
+            "ref": "6b63fb76d3bb2dd16098f12adf6d6ca844e21862"
+        }
+    },
     "behat/transliterator": {
         "version": "v1.2.0"
     },
@@ -151,6 +160,9 @@
     },
     "gedmo/doctrine-extensions": {
         "version": "v2.4.35"
+    },
+    "genesis/behat-fail-aid": {
+        "version": "1.2.1"
     },
     "guzzlehttp/guzzle": {
         "version": "6.3.3"

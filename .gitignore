@@ -48,3 +48,11 @@ yarn-error.log
 ###> phpunit/phpunit ###
 /phpunit.xml
 ###< phpunit/phpunit ###
+
+###> behat/symfony2-extension ###
+behat.yml
+###< behat/symfony2-extension ###
+
+###> docker ###
+.docker/data/*
+###< docker ###
