@@ -389,6 +389,9 @@
     "sebastian/version": {
         "version": "2.0.1"
     },
+    "slam/php-cs-fixer-extensions": {
+        "version": "v1.17.0"
+    },
     "slevomat/coding-standard": {
         "version": "4.7.3"
     },
@@ -685,6 +688,9 @@
     },
     "symplify/token-runner": {
         "version": "v4.7.0"
+    },
+    "thecodingmachine/safe": {
+        "version": "v0.1.4"
     },
     "theseer/tokenizer": {
         "version": "1.1.0"

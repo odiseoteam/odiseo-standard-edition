@@ -1,10 +1,10 @@
-import { uglify } from 'rollup-plugin-uglify';
 import concat from 'gulp-concat';
 import gulp from 'gulp';
 import gulpif from 'gulp-if';
 import livereload from 'gulp-livereload';
 import sourcemaps from 'gulp-sourcemaps';
 import upath from 'upath';
+import uglify from 'gulp-uglify';
 import yargs from 'yargs';
 
 const { argv } = yargs.options({

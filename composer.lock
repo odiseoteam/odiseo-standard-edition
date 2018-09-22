@@ -1907,16 +1907,16 @@
         },
         {
             "name": "genesis/behat-fail-aid",
-            "version": "1.2.1",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/forceedge01/behat-fail-aid.git",
-                "reference": "7a84d5d92602a74863b7150ce28427ae258a0af0"
+                "reference": "75c1e65ed0ad5c6c121f6365e1914558763510db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/forceedge01/behat-fail-aid/zipball/7a84d5d92602a74863b7150ce28427ae258a0af0",
-                "reference": "7a84d5d92602a74863b7150ce28427ae258a0af0",
+                "url": "https://api.github.com/repos/forceedge01/behat-fail-aid/zipball/75c1e65ed0ad5c6c121f6365e1914558763510db",
+                "reference": "75c1e65ed0ad5c6c121f6365e1914558763510db",
                 "shasum": ""
             },
             "require": {
@@ -1943,7 +1943,7 @@
                 }
             ],
             "description": "Get more out of your test suite by getting it to work with you when tests fail. Works with Goutte and MinkExtension (Selenium2Driver)",
-            "time": "2018-09-15T02:17:31+00:00"
+            "time": "2018-09-16T22:29:09+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -3351,16 +3351,16 @@
         },
         {
             "name": "odiseoteam/odiseo-admin-bundle",
-            "version": "v2.1.4",
+            "version": "v2.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/odiseoteam/OdiseoAdminBundle.git",
-                "reference": "c4bc35aab853be8bb1b73e0484a78c08320d1f26"
+                "reference": "b40ecb81d05dcf3bb04eb341fa6a260ac6b161a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/odiseoteam/OdiseoAdminBundle/zipball/c4bc35aab853be8bb1b73e0484a78c08320d1f26",
-                "reference": "c4bc35aab853be8bb1b73e0484a78c08320d1f26",
+                "url": "https://api.github.com/repos/odiseoteam/OdiseoAdminBundle/zipball/b40ecb81d05dcf3bb04eb341fa6a260ac6b161a0",
+                "reference": "b40ecb81d05dcf3bb04eb341fa6a260ac6b161a0",
                 "shasum": ""
             },
             "require": {
@@ -3394,7 +3394,7 @@
                 "cms",
                 "symfony"
             ],
-            "time": "2018-09-12T05:22:10+00:00"
+            "time": "2018-09-17T23:21:14+00:00"
         },
         {
             "name": "odiseoteam/odiseo-user-bundle",
@@ -9001,16 +9001,16 @@
         },
         {
             "name": "nette/utils",
-            "version": "v2.5.2",
+            "version": "v2.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "183069866dc477fcfbac393ed486aaa6d93d19a5"
+                "reference": "17b9f76f2abd0c943adfb556e56f2165460b15ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/183069866dc477fcfbac393ed486aaa6d93d19a5",
-                "reference": "183069866dc477fcfbac393ed486aaa6d93d19a5",
+                "url": "https://api.github.com/repos/nette/utils/zipball/17b9f76f2abd0c943adfb556e56f2165460b15ce",
+                "reference": "17b9f76f2abd0c943adfb556e56f2165460b15ce",
                 "shasum": ""
             },
             "require": {
@@ -9079,7 +9079,7 @@
                 "utility",
                 "validation"
             ],
-            "time": "2018-05-02T17:16:08+00:00"
+            "time": "2018-09-18T10:22:16+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -10727,22 +10727,69 @@
             "time": "2016-10-03T07:35:21+00:00"
         },
         {
-            "name": "slevomat/coding-standard",
-            "version": "4.7.3",
+            "name": "slam/php-cs-fixer-extensions",
+            "version": "v1.17.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/slevomat/coding-standard.git",
-                "reference": "360ed8f9ce03afbf07fc67d198fe187fc2543c32"
+                "url": "https://github.com/Slamdunk/php-cs-fixer-extensions.git",
+                "reference": "f2d819ff70cc098f68cd2eefd3279c2f54e0ccad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/360ed8f9ce03afbf07fc67d198fe187fc2543c32",
-                "reference": "360ed8f9ce03afbf07fc67d198fe187fc2543c32",
+                "url": "https://api.github.com/repos/Slamdunk/php-cs-fixer-extensions/zipball/f2d819ff70cc098f68cd2eefd3279c2f54e0ccad",
+                "reference": "f2d819ff70cc098f68cd2eefd3279c2f54e0ccad",
+                "shasum": ""
+            },
+            "require": {
+                "friendsofphp/php-cs-fixer": "^2.13",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.10",
+                "phpstan/phpstan-phpunit": "^0.10",
+                "phpunit/phpunit": "^7.3",
+                "roave/security-advisories": "dev-master",
+                "slam/php-debug-r": "^1.4",
+                "slam/phpstan-extensions": "^2.0",
+                "thecodingmachine/phpstan-strict-rules": "^0.10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SlamCsFixer\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Filippo Tessarotto",
+                    "email": "zoeslam@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Slam extension of friendsofphp/php-cs-fixer",
+            "time": "2018-08-30T15:03:51+00:00"
+        },
+        {
+            "name": "slevomat/coding-standard",
+            "version": "4.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/slevomat/coding-standard.git",
+                "reference": "7b33fb140a8ee1502754c4c8dc44c3082746f30c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/7b33fb140a8ee1502754c4c8dc44c3082746f30c",
+                "reference": "7b33fb140a8ee1502754c4c8dc44c3082746f30c",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1",
-                "squizlabs/php_codesniffer": "^3.2.3"
+                "squizlabs/php_codesniffer": "^3.3.0"
             },
             "require-dev": {
                 "jakub-onderka/php-parallel-lint": "1.0.0",
@@ -10750,7 +10797,7 @@
                 "phpstan/phpstan": "0.9.2",
                 "phpstan/phpstan-phpunit": "0.9.4",
                 "phpstan/phpstan-strict-rules": "0.9",
-                "phpunit/phpunit": "7.3.1"
+                "phpunit/phpunit": "7.3.5"
             },
             "type": "phpcodesniffer-standard",
             "autoload": {
@@ -10763,7 +10810,7 @@
                 "MIT"
             ],
             "description": "Slevomat Coding Standard for PHP_CodeSniffer complements Consistence Coding Standard by providing sniffs with additional checks.",
-            "time": "2018-09-03T21:12:37+00:00"
+            "time": "2018-09-19T22:49:38+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -11361,23 +11408,24 @@
         },
         {
             "name": "symplify/better-phpdoc-parser",
-            "version": "v4.7.0",
+            "version": "v4.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Symplify/BetterPhpDocParser.git",
-                "reference": "23313a6a195b059f5fe3294b972fab3ca1a46c69"
+                "reference": "8981ae3a217c921fdb81d2e7e18c89a7223409b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Symplify/BetterPhpDocParser/zipball/23313a6a195b059f5fe3294b972fab3ca1a46c69",
-                "reference": "23313a6a195b059f5fe3294b972fab3ca1a46c69",
+                "url": "https://api.github.com/repos/Symplify/BetterPhpDocParser/zipball/8981ae3a217c921fdb81d2e7e18c89a7223409b1",
+                "reference": "8981ae3a217c921fdb81d2e7e18c89a7223409b1",
                 "shasum": ""
             },
             "require": {
                 "nette/utils": "^2.5",
                 "php": "^7.1",
                 "phpstan/phpdoc-parser": "^0.2|^0.3",
-                "symplify/package-builder": "^4.7"
+                "symplify/package-builder": "^4.8",
+                "thecodingmachine/safe": "^0.1.3"
             },
             "require-dev": {
                 "phpunit/phpunit": "^7.3"
@@ -11385,7 +11433,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.7-dev"
+                    "dev-master": "4.8-dev"
                 }
             },
             "autoload": {
@@ -11398,20 +11446,20 @@
                 "MIT"
             ],
             "description": "Slim wrapper around phpstan/phpdoc-parser with format preserving printer",
-            "time": "2018-09-02T15:29:44+00:00"
+            "time": "2018-09-15T13:45:05+00:00"
         },
         {
             "name": "symplify/coding-standard",
-            "version": "v4.7.0",
+            "version": "v4.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Symplify/CodingStandard.git",
-                "reference": "ac498387e4ee0a258182ba33887b60a830128b75"
+                "reference": "3a4b432b821423478b3f097106255907979e4ee5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Symplify/CodingStandard/zipball/ac498387e4ee0a258182ba33887b60a830128b75",
-                "reference": "ac498387e4ee0a258182ba33887b60a830128b75",
+                "url": "https://api.github.com/repos/Symplify/CodingStandard/zipball/3a4b432b821423478b3f097106255907979e4ee5",
+                "reference": "3a4b432b821423478b3f097106255907979e4ee5",
                 "shasum": ""
             },
             "require": {
@@ -11419,19 +11467,21 @@
                 "nette/finder": "^2.4",
                 "nette/utils": "^2.5",
                 "php": "^7.1",
+                "slam/php-cs-fixer-extensions": "^1.17",
                 "squizlabs/php_codesniffer": "^3.3",
-                "symplify/token-runner": "^4.7"
+                "symplify/token-runner": "^4.8",
+                "thecodingmachine/safe": "^0.1.3"
             },
             "require-dev": {
                 "nette/application": "^2.4",
                 "phpunit/phpunit": "^7.3",
-                "symplify/easy-coding-standard-tester": "^4.7",
-                "symplify/package-builder": "^4.7"
+                "symplify/easy-coding-standard-tester": "^4.8",
+                "symplify/package-builder": "^4.8"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.7-dev"
+                    "dev-master": "4.8-dev"
                 }
             },
             "autoload": {
@@ -11444,26 +11494,26 @@
                 "MIT"
             ],
             "description": "Set of Symplify rules for PHP_CodeSniffer and PHP CS Fixer.",
-            "time": "2018-09-02T15:29:44+00:00"
+            "time": "2018-09-15T13:22:18+00:00"
         },
         {
             "name": "symplify/easy-coding-standard",
-            "version": "v4.7.0",
+            "version": "v4.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Symplify/EasyCodingStandard.git",
-                "reference": "861f78b7742b2f28fe3475f4e2f3d588839d30d5"
+                "reference": "f91cbb452676e627dfcabba7d31a0aef29b834fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Symplify/EasyCodingStandard/zipball/861f78b7742b2f28fe3475f4e2f3d588839d30d5",
-                "reference": "861f78b7742b2f28fe3475f4e2f3d588839d30d5",
+                "url": "https://api.github.com/repos/Symplify/EasyCodingStandard/zipball/f91cbb452676e627dfcabba7d31a0aef29b834fc",
+                "reference": "f91cbb452676e627dfcabba7d31a0aef29b834fc",
                 "shasum": ""
             },
             "require": {
                 "friendsofphp/php-cs-fixer": "^2.13",
-                "jean85/pretty-package-versions": "^1.1",
-                "nette/robot-loader": "^3.0.3",
+                "jean85/pretty-package-versions": "^1.2",
+                "nette/robot-loader": "^3.1.0",
                 "nette/utils": "^2.5",
                 "ocramius/package-versions": "^1.3",
                 "php": "^7.1",
@@ -11476,13 +11526,14 @@
                 "symfony/finder": "^3.4|^4.0",
                 "symfony/http-kernel": "^3.4|^4.0",
                 "symfony/yaml": "^3.4|^4.0",
-                "symplify/coding-standard": "^4.7",
-                "symplify/package-builder": "^4.7",
-                "symplify/token-runner": "^4.7"
+                "symplify/coding-standard": "^4.8",
+                "symplify/package-builder": "^4.8",
+                "symplify/token-runner": "^4.8",
+                "thecodingmachine/safe": "^0.1.3"
             },
             "require-dev": {
                 "phpunit/phpunit": "^7.3",
-                "symplify/easy-coding-standard-tester": "^4.7"
+                "symplify/easy-coding-standard-tester": "^4.8"
             },
             "bin": [
                 "bin/ecs"
@@ -11490,7 +11541,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.7-dev"
+                    "dev-master": "4.8-dev"
                 }
             },
             "autoload": {
@@ -11507,20 +11558,20 @@
                 "MIT"
             ],
             "description": "Use Coding Standard with 0-knowledge of PHP-CS-Fixer and PHP_CodeSniffer.",
-            "time": "2018-09-03T18:12:27+00:00"
+            "time": "2018-09-15T13:22:18+00:00"
         },
         {
             "name": "symplify/package-builder",
-            "version": "v4.7.0",
+            "version": "v4.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Symplify/PackageBuilder.git",
-                "reference": "19cb67ee3f6f18357245460b531a108a81805fc1"
+                "reference": "b725936b7046852a9ab15e408ee4cd84c6be2faa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Symplify/PackageBuilder/zipball/19cb67ee3f6f18357245460b531a108a81805fc1",
-                "reference": "19cb67ee3f6f18357245460b531a108a81805fc1",
+                "url": "https://api.github.com/repos/Symplify/PackageBuilder/zipball/b725936b7046852a9ab15e408ee4cd84c6be2faa",
+                "reference": "b725936b7046852a9ab15e408ee4cd84c6be2faa",
                 "shasum": ""
             },
             "require": {
@@ -11532,7 +11583,8 @@
                 "symfony/dependency-injection": "^3.4|^4.0",
                 "symfony/finder": "^3.4|^4.0",
                 "symfony/http-kernel": "^3.4|^4.0",
-                "symfony/yaml": "^3.4|^4.0"
+                "symfony/yaml": "^3.4|^4.0",
+                "thecodingmachine/safe": "^0.1.3"
             },
             "require-dev": {
                 "phpunit/phpunit": "^7.3"
@@ -11540,7 +11592,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.7-dev"
+                    "dev-master": "4.8-dev"
                 }
             },
             "autoload": {
@@ -11553,20 +11605,20 @@
                 "MIT"
             ],
             "description": "Dependency Injection, Console and Kernel toolkit for Symplify packages.",
-            "time": "2018-09-02T15:29:44+00:00"
+            "time": "2018-09-15T13:22:18+00:00"
         },
         {
             "name": "symplify/token-runner",
-            "version": "v4.7.0",
+            "version": "v4.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Symplify/TokenRunner.git",
-                "reference": "fee1f3b586b1caee064c4592795af2bd46b20117"
+                "reference": "3e1cdf9cad6836433c78b3adbd0c8e5000acc8a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Symplify/TokenRunner/zipball/fee1f3b586b1caee064c4592795af2bd46b20117",
-                "reference": "fee1f3b586b1caee064c4592795af2bd46b20117",
+                "url": "https://api.github.com/repos/Symplify/TokenRunner/zipball/3e1cdf9cad6836433c78b3adbd0c8e5000acc8a4",
+                "reference": "3e1cdf9cad6836433c78b3adbd0c8e5000acc8a4",
                 "shasum": ""
             },
             "require": {
@@ -11575,8 +11627,9 @@
                 "nette/utils": "^2.5",
                 "php": "^7.1",
                 "squizlabs/php_codesniffer": "^3.3",
-                "symplify/better-phpdoc-parser": "^4.7",
-                "symplify/package-builder": "^4.7"
+                "symplify/better-phpdoc-parser": "^4.8",
+                "symplify/package-builder": "^4.8",
+                "thecodingmachine/safe": "^0.1.3"
             },
             "require-dev": {
                 "phpunit/phpunit": "^7.3"
@@ -11584,7 +11637,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.7-dev"
+                    "dev-master": "4.8-dev"
                 }
             },
             "autoload": {
@@ -11597,7 +11650,137 @@
                 "MIT"
             ],
             "description": "Set of utils for PHP_CodeSniffer and PHP CS Fixer.",
-            "time": "2018-09-02T15:29:44+00:00"
+            "time": "2018-09-15T14:17:28+00:00"
+        },
+        {
+            "name": "thecodingmachine/safe",
+            "version": "v0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thecodingmachine/safe.git",
+                "reference": "b5446e5a8a92b26c613bb9f76bb16d23bf076445"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thecodingmachine/safe/zipball/b5446e5a8a92b26c613bb9f76bb16d23bf076445",
+                "reference": "b5446e5a8a92b26c613bb9f76bb16d23bf076445",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.10.3",
+                "squizlabs/php_codesniffer": "^3.2",
+                "thecodingmachine/phpstan-strict-rules": "^0.10.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Safe\\": [
+                        "lib/",
+                        "generated/"
+                    ]
+                },
+                "files": [
+                    "generated/apache.php",
+                    "generated/apc.php",
+                    "generated/apcu.php",
+                    "generated/array.php",
+                    "generated/bzip2.php",
+                    "generated/classobj.php",
+                    "generated/com.php",
+                    "generated/cubrid.php",
+                    "generated/curl.php",
+                    "generated/datetime.php",
+                    "generated/dir.php",
+                    "generated/eio.php",
+                    "generated/errorfunc.php",
+                    "generated/exec.php",
+                    "generated/fileinfo.php",
+                    "generated/filesystem.php",
+                    "generated/filter.php",
+                    "generated/fpm.php",
+                    "generated/ftp.php",
+                    "generated/funchand.php",
+                    "generated/gmp.php",
+                    "generated/gnupg.php",
+                    "generated/hash.php",
+                    "generated/ibase.php",
+                    "generated/ibmDb2.php",
+                    "generated/iconv.php",
+                    "generated/image.php",
+                    "generated/imap.php",
+                    "generated/info.php",
+                    "generated/ingres-ii.php",
+                    "generated/inotify.php",
+                    "generated/json.php",
+                    "generated/ldap.php",
+                    "generated/libevent.php",
+                    "generated/libxml.php",
+                    "generated/lzf.php",
+                    "generated/mailparse.php",
+                    "generated/mbstring.php",
+                    "generated/misc.php",
+                    "generated/msql.php",
+                    "generated/mssql.php",
+                    "generated/mysql.php",
+                    "generated/mysqlndMs.php",
+                    "generated/mysqlndQc.php",
+                    "generated/network.php",
+                    "generated/oci8.php",
+                    "generated/opcache.php",
+                    "generated/openssl.php",
+                    "generated/outcontrol.php",
+                    "generated/password.php",
+                    "generated/pcntl.php",
+                    "generated/pcre.php",
+                    "generated/pdf.php",
+                    "generated/pgsql.php",
+                    "generated/posix.php",
+                    "generated/ps.php",
+                    "generated/pspell.php",
+                    "generated/readline.php",
+                    "generated/rrd.php",
+                    "generated/sem.php",
+                    "generated/session.php",
+                    "generated/shmop.php",
+                    "generated/simplexml.php",
+                    "generated/sockets.php",
+                    "generated/sodium.php",
+                    "generated/solr.php",
+                    "generated/spl.php",
+                    "generated/sqlsrv.php",
+                    "generated/ssh2.php",
+                    "generated/stats.php",
+                    "generated/stream.php",
+                    "generated/strings.php",
+                    "generated/swoole.php",
+                    "generated/uodbc.php",
+                    "generated/uopz.php",
+                    "generated/url.php",
+                    "generated/var.php",
+                    "generated/xdiff.php",
+                    "generated/xml.php",
+                    "generated/xmlrpc.php",
+                    "generated/yaml.php",
+                    "generated/yaz.php",
+                    "generated/zip.php",
+                    "generated/zlib.php",
+                    "lib/special_cases.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP core functions that throw exceptions instead of returning FALSE on error",
+            "time": "2018-09-18T07:41:17+00:00"
         },
         {
             "name": "theseer/tokenizer",

@@ -71,6 +71,9 @@ watchApp.description = 'Watch app asset sources and rebuild on changes.';
 export const build = gulp.parallel(buildOdiseoAdmin, buildAdmin, buildApp);
 build.description = 'Build assets.';
 
+export const watch = gulp.parallel(watchApp);
+watch.description = 'Watch assets.';
+
 gulp.task('admin', buildAdmin);
 gulp.task('admin-watch', watchAdmin);
 gulp.task('app', buildApp);

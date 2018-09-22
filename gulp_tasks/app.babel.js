@@ -1,4 +1,3 @@
-import { uglify } from 'rollup-plugin-uglify';
 import concat from 'gulp-concat';
 import gulp from 'gulp';
 import gulpif from 'gulp-if';
@@ -8,6 +7,7 @@ import order from 'gulp-order';
 import sourcemaps from 'gulp-sourcemaps';
 import upath from 'upath';
 import uglifycss from 'gulp-uglifycss';
+import uglify from 'gulp-uglify';
 import yargs from 'yargs';
 
 const { argv } = yargs.options({
