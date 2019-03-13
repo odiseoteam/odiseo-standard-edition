@@ -30,7 +30,7 @@ GET FUN!!!
 Tests
 -------
 
-This Symfony4 skeleton project comes with a ready to use testing tools like phpstan and behat.
+This Symfony4 project comes with a ready to use testing tools like phpstan and behat.
 
 #### Phpstan
 
@@ -50,4 +50,4 @@ $ vendor/bin/behat
 Authors
 -------
 
-This project is maintained by <a href="https://odiseo.com.ar">Odiseo</a>. Want us to help you with this or any Symfony project? Contact us on <a href="mailto:team@odiseo.com.ar">team@odiseo.com.ar</a>.
+This project is maintained by <a href="https://odiseo.com.ar">Odiseo</a>. Do you want us to help you with this or any Symfony project? Contact us on <a href="mailto:team@odiseo.com.ar">team@odiseo.com.ar</a>.
