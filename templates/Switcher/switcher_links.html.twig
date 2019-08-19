@@ -1,0 +1,14 @@
+{% set targetLocale = false %}
+
+{% for locale in locales %}
+    {% set targetLocale = locale %}
+{% endfor %}
+
+{% if targetLocale is defined and not false %}
+    <p>
+        <a href="{{ targetLocale.link }}" title="{{ targetLocale.locale_target_language }}" style="text-decoration: underline !important;">
+            <i class="icon-world"></i>
+            {{ ('app.ui.change_locale_to_'~targetLocale.locale)|trans|raw }}
+        </a>
+    </p>
+{% endif %}

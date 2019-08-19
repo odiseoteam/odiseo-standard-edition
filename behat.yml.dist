@@ -2,10 +2,14 @@ default:
     suites:
         participating:
             contexts:
-                - FailAid\Context\FailureContext:
-                    screenshotDirectory: [dir-to-project]/etc/build
+                - FailAid\Context\FailureContext
                 - FeatureContext
     extensions:
+        FailAid\Extension:
+            screenshot:
+                directory: ./etc/build
+                mode: default
+                autoClean: false
         Behat\Symfony2Extension:
             kernel:
                 class: App\Kernel

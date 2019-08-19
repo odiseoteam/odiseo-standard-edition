@@ -18,6 +18,7 @@ const { argv } = yargs
     },
   });
 
+const env = process.env.GULP_ENV;
 const vendorConfig = [
   '--rootPath',
   argv.rootPath || '../../../public/assets',
@@ -34,7 +35,7 @@ const appConfig = [
 
 export const buildOdiseoAdmin = function buildOdiseoAdmin() {
   return gulp.src('vendor/odiseoteam/odiseo-admin-bundle/gulpfile.babel.js', { read: false })
-    .pipe(chug({ args: vendorConfig }));
+    .pipe(chug({ args: vendorConfig, tasks: 'build' }));
 };
 buildOdiseoAdmin.description = 'Build odiseo admin assets.';
 
@@ -46,7 +47,7 @@ watchOdiseoAdmin.description = 'Watch odiseo admin assets.';
 
 export const buildAdmin = function buildAdmin() {
   return gulp.src('gulp_tasks/admin.babel.js', { read: false })
-    .pipe(chug({ args: appConfig }));
+    .pipe(chug({ args: appConfig, tasks: 'build' }));
 };
 buildAdmin.description = 'Build admin assets.';
 
@@ -56,27 +57,15 @@ export const watchAdmin = function watchAdmin() {
 };
 watchAdmin.description = 'Watch admin asset sources and rebuild on changes.';
 
-export const buildApp = function buildApp() {
-  return gulp.src('gulp_tasks/app.babel.js', { read: false })
-    .pipe(chug({ args: appConfig }));
-};
-buildApp.description = 'Build app assets.';
-
-export const watchApp = function watchApp() {
-  return gulp.src('gulp_tasks/app.babel.js', { read: false })
-    .pipe(chug({ args: appConfig, tasks: 'watch' }));
-};
-watchApp.description = 'Watch app asset sources and rebuild on changes.';
-
-export const build = gulp.parallel(buildOdiseoAdmin, buildAdmin, buildApp);
+export const build = gulp.series(gulp.parallel(buildOdiseoAdmin, buildAdmin));
 build.description = 'Build assets.';
 
-export const watch = gulp.parallel(watchApp);
-watch.description = 'Watch assets.';
+export const watch = gulp.series(gulp.parallel(watchOdiseoAdmin, watchAdmin));
+watch.description = 'Watch asset sources and rebuild on changes.';
 
+gulp.task('odiseo-admin', buildOdiseoAdmin);
+gulp.task('odiseo-admin-watch', watchOdiseoAdmin);
 gulp.task('admin', buildAdmin);
 gulp.task('admin-watch', watchAdmin);
-gulp.task('app', buildApp);
-gulp.task('app-watch', watchApp);
 
 export default build;

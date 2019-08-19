@@ -58,6 +58,10 @@ knp_gaufrette:
             adapter: image_adapter
 
 lunetics_locale:
+    switcher:
+        template: Switcher/switcher_links.html.twig
+    strict_mode: false
+    strict_match: true
     guessing_order:
         - query
         - router

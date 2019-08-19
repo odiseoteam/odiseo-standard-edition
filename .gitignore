@@ -2,13 +2,24 @@
 .idea
 .DS_Store
 
-/.env
-/app/config/parameters.yml
-/app/config/*.local.yml
-/var/*
-!/var/.gitkeep
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
 
-/public/assets
+###> liip/imagine-bundle ###
+/public/media/cache/
+###< liip/imagine-bundle ###
+
+###> friends-of-behat/symfony-extension ###
+/behat.yml
+###< friends-of-behat/symfony-extension ###
+
+/public/assets/admin
 /public/bundles
 /public/css
 /public/js
@@ -28,12 +39,12 @@
 /phpunit.xml
 /phpspec.yml
 
-###> symfony/webpack-encore-pack ###
+###> symfony/webpack-encore-bundle ###
 /node_modules/
 /public/build/
 npm-debug.log
 yarn-error.log
-###< symfony/webpack-encore-pack ###
+###< symfony/webpack-encore-bundle ###
 
 ###> squizlabs/php_codesniffer ###
 /.phpcs-cache

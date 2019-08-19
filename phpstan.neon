@@ -6,9 +6,6 @@ includes:
 parameters:
     reportUnmatchedIgnoredErrors: false
 
-    symfony:
-        container_xml_path: var/cache/dev/srcDevDebugProjectContainer.xml
-
     excludes_analyse:
         # Test dependencies
         - 'app/**.php'

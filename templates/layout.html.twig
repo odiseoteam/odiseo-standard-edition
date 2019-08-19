@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="keywords" content=""/>
     <meta name="author" content="Odiseo Team">
-    
+
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{% block og_title %}{% endblock %}" />
     <meta property="og:description" content="{% block og_description %}{% endblock %}" />
@@ -22,7 +22,7 @@
     <link href="{{ asset('assets/app/images/favicon.png') }}" rel="icon" type="image/png">
 
     {% block stylesheets %}
-        <link href="{{ asset('assets/app/css/app.css') }}" rel="stylesheet" type="text/css">
+        {{ encore_entry_link_tags('app') }}
     {% endblock %}
 
     <!-- Scripts -->
@@ -32,6 +32,8 @@
     {{ include('_facebook_sdk.html.twig') }}
 
     {{ include('_header.html.twig') }}
+    
+    {{ include('_flashes.html.twig') }}
 
     <div class="content">
         {% block content %}
@@ -41,7 +43,7 @@
     {{ include('_footer.html.twig') }}
 
     {% block javascripts %}
-        <script src="{{ asset('assets/app/js/app.js') }}"></script>
+    	{{ encore_entry_script_tags('app') }}
     {% endblock %}
 </body>
 </html>
