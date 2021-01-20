@@ -5,7 +5,7 @@
     "bootstrap": "^4.1.0",
     "chart.js": "^2.7.2",
     "font-awesome": "^4.7.0",
-    "gsap": "^1.20.4",
+    "gsap": "^3.6.0",
     "hover.css": "^2.3.2",
     "ionicons": "^2.0.1",
     "jquery": "^3.3.1",
