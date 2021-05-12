@@ -3,7 +3,7 @@
     "animate.css": "latest",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.1.0",
-    "chart.js": "^2.7.2",
+    "chart.js": "^2.9.4",
     "font-awesome": "^4.7.0",
     "gsap": "^1.20.4",
     "hover.css": "^2.3.2",
